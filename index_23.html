@@ -1,0 +1,2024 @@
+<title>Cheong Sarak Jewelry</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..600&family=Hanken+Grotesk:wght@400;500;600;700&family=Noto+Sans+Khmer:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout concept: a quiet jeweller's ledger. Pearl-grey ground, deep green-black ink, gold used only for focus and price emphasis. */
+:root {
+  --bg: #F1F3F0; --surface: #FFFFFF; --surface-2: #E7EBE7; --ink: #14211D; --muted: #55645E; --line: #D3D9D3;
+  --gold: #7F5C0E; --gold-fill: #C79F45; --ring: #A57A12; --primary: #14211D; --on-primary: #F1F3F0;
+  --ok: #226C46; --ok-bg: #DDEFE4; --warn: #8A5A00; --warn-bg: #F8EBCB; --bad: #A52F25; --bad-bg: #F8DEDA; --on-bad: #FFFFFF;
+  --bar-bg: #F1F3F0; --scrim: rgba(8, 14, 12, .55); --shadow: 0 1px 2px rgba(20, 33, 29, .06), 0 8px 24px rgba(20, 33, 29, .08);
+  --display: 'Bodoni Moda', 'Didot', 'Bodoni 72', Georgia, serif;
+  --body: 'Hanken Grotesk', 'Noto Sans Khmer', 'Khmer OS', 'Leelawadee UI', 'Khmer Sangam MN', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0C1311; --surface: #131C19; --surface-2: #1A2622; --ink: #E8EEEA; --muted: #97A8A1; --line: #26332E;
+    --gold: #D8B461; --gold-fill: #C79F45; --ring: #E7C77A; --primary: #D8B461; --on-primary: #14211D;
+    --ok: #5CC38B; --ok-bg: #12301F; --warn: #E5B04A; --warn-bg: #33290F; --bad: #F0786B; --bad-bg: #3A1713; --on-bad: #1A0907;
+    --bar-bg: #0C1311; --scrim: rgba(0, 0, 0, .66); --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .35);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0C1311; --surface: #131C19; --surface-2: #1A2622; --ink: #E8EEEA; --muted: #97A8A1; --line: #26332E;
+  --gold: #D8B461; --gold-fill: #C79F45; --ring: #E7C77A; --primary: #D8B461; --on-primary: #14211D;
+  --ok: #5CC38B; --ok-bg: #12301F; --warn: #E5B04A; --warn-bg: #33290F; --bad: #F0786B; --bad-bg: #3A1713; --on-bad: #1A0907;
+  --bar-bg: #0C1311; --scrim: rgba(0, 0, 0, .66); --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .35);
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.5; min-height: 100%; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); background: var(--bar-bg); z-index: 40; }
+h1, h2, h3, p { margin: 0; }
+h1 { font-family: var(--display); font-weight: 500; font-size: clamp(1.9rem, 5vw, 2.9rem); line-height: 1.06; letter-spacing: -.01em; text-wrap: balance; }
+h2 { font-size: 1.05rem; font-weight: 650; letter-spacing: .01em; }
+h3 { font-size: 1rem; font-weight: 600; }
+a { color: inherit; }
+button, input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; border-radius: 4px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.gut { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.mono { font-family: var(--mono); font-size: .8rem; letter-spacing: .01em; }
+.dim { color: var(--muted); }
+.eyebrow { font-size: .72rem; text-transform: uppercase; letter-spacing: .14em; color: var(--gold); font-weight: 600; }
+.sub { color: var(--muted); font-size: .92rem; }
+small { font-size: .8rem; color: var(--muted); }
+
+/* top bar */
+#topbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 30; background: var(--bar-bg); border-bottom: 1px solid var(--line); }
+.bar-inner { max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; padding-block: 10px; }
+.brand { display: flex; align-items: baseline; gap: 10px; margin-right: auto; }
+.brand b { font-family: var(--display); font-style: italic; font-weight: 500; font-size: 1.55rem; letter-spacing: -.01em; }
+.brand span { font-family: var(--mono); font-size: .66rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; padding: 3px; background: var(--surface); }
+.seg button { border: 0; background: none; padding: 6px 14px; border-radius: 6px; cursor: pointer; font-weight: 550; color: var(--muted); }
+.seg button[aria-current="page"] { background: var(--primary); color: var(--on-primary); }
+.demo-pill[hidden] { display: none; } .demo-pill { font-family: var(--mono); font-size: .68rem; letter-spacing: .12em; border: 1px solid var(--gold-fill); color: var(--gold); padding: 4px 9px; border-radius: 999px; white-space: nowrap; }
+#theme-btn svg { display: block; }
+#theme-btn[data-mode="light"] svg .half { opacity: 0; } #theme-btn[data-mode="dark"] svg .full { opacity: 1; }
+.banner { background: var(--warn-bg); color: var(--warn); font-weight: 550; padding-block: 8px; font-size: .88rem; }
+#app { max-width: 1240px; margin: 0 auto; padding-block: 26px 70px; min-width: 0; }
+.foot { max-width: 1240px; margin: 0 auto; padding-block: 0 28px; color: var(--muted); font-size: .8rem; }
+.foot b { font-family: var(--mono); letter-spacing: .1em; color: var(--gold); font-weight: 500; }
+
+/* buttons & controls */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 40px; padding: 8px 16px; border-radius: 7px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; font-weight: 600; text-decoration: none; transition: background .15s, border-color .15s; line-height: 1.2; }
+.btn:hover { border-color: var(--muted); }
+.btn.primary { background: var(--primary); color: var(--on-primary); border-color: var(--primary); }
+.btn.primary:hover { filter: brightness(1.08); }
+.btn.ghost { background: transparent; }
+.btn.danger { background: var(--bad); border-color: var(--bad); color: var(--on-bad); }
+.btn.sm { min-height: 32px; padding: 4px 11px; font-size: .86rem; }
+.btn:disabled, .icon-btn:disabled { opacity: .45; cursor: not-allowed; }
+.danger-text { color: var(--bad); }
+.icon-btn { width: 34px; height: 34px; border-radius: 7px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; display: inline-grid; place-items: center; font-size: 1.1rem; line-height: 1; padding: 0; }
+.linklike { background: none; border: 0; padding: 0; color: var(--gold); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; font-weight: 550; }
+.field { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.field.grow { flex: 1 1 220px; }
+.field.inline { flex-direction: row; align-items: center; gap: 8px; }
+label, legend { font-size: .82rem; font-weight: 600; color: var(--ink); }
+.req { color: var(--bad); }
+input[type=text], input[type=search], input[type=date], select, textarea { width: 100%; min-height: 40px; padding: 8px 11px; border: 1px solid var(--line); border-radius: 7px; background: var(--surface); color: var(--ink); }
+textarea { resize: vertical; min-height: 88px; }
+input[type=file] { max-width: 100%; }
+input:hover, select:hover, textarea:hover { border-color: var(--muted); }
+[aria-invalid="true"] { border-color: var(--bad) !important; box-shadow: 0 0 0 1px var(--bad); }
+.hint { color: var(--muted); font-size: .8rem; }
+.err { color: var(--bad); font-size: .82rem; font-weight: 550; min-height: 0; }
+.err:empty { display: none; }
+.money { display: grid; grid-template-columns: minmax(0, 1fr) 104px; gap: 6px; }
+.radios { border: 0; padding: 0; margin: 0 0 4px; display: grid; gap: 6px; min-width: 0; }
+.radios legend { padding: 0; margin-bottom: 4px; }
+.radio, .check { display: flex; gap: 9px; align-items: flex-start; font-weight: 500; font-size: .92rem; cursor: pointer; }
+.radio input, .check input { margin-top: 3px; accent-color: var(--primary); }
+.checks { border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; margin: 12px 0 0; display: grid; gap: 8px; max-height: 260px; overflow: auto; min-width: 0; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 20px; margin-bottom: 18px; min-width: 0; }
+.panel.flush { padding: 0; overflow: hidden; }
+.panel > h2 { margin-bottom: 14px; }
+.panel-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; padding: 16px 20px; border-bottom: 1px solid var(--line); }
+.form-grid { display: grid; grid-template-columns: 1fr; gap: 14px 16px; }
+.form-grid.inner { margin-top: 2px; }
+.span2 { grid-column: 1 / -1; }
+.note { background: var(--surface-2); border-radius: 8px; padding: 10px 12px; color: var(--muted); font-size: .88rem; }
+.form-actions, .head-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.head-actions { margin-top: 0; }
+.page-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 14px; margin-bottom: 20px; }
+.page-head .sub { margin-top: 6px; max-width: 62ch; }
+.crumb-link { margin-bottom: 8px; font-size: .86rem; }
+.tabs { display: flex; gap: 4px; overflow-x: auto; border-bottom: 1px solid var(--line); margin-bottom: 24px; }
+.tab { border: 0; background: none; padding: 10px 14px; cursor: pointer; font-weight: 600; color: var(--muted); border-bottom: 2px solid transparent; white-space: nowrap; margin-bottom: -1px; }
+.tab[aria-current="page"] { color: var(--ink); border-bottom-color: var(--gold-fill); }
+.pill { display: inline-block; font-size: .72rem; font-weight: 650; padding: 2px 9px; border-radius: 999px; letter-spacing: .02em; vertical-align: middle; }
+.pill.published { background: var(--ok-bg); color: var(--ok); }
+.pill.hidden { background: var(--surface-2); color: var(--muted); }
+.pill.archived { background: var(--surface-2); color: var(--muted); text-decoration: line-through; }
+.pill.warn { background: var(--warn-bg); color: var(--warn); }
+.flag { display: inline-block; background: var(--warn-bg); color: var(--warn); font-size: .76rem; font-weight: 650; padding: 2px 9px; border-radius: 999px; }
+.tag-new { background: var(--ok-bg); color: var(--ok); font-size: .76rem; font-weight: 650; padding: 2px 9px; border-radius: 999px; }
+.issue { display: block; color: var(--warn); font-weight: 550; margin-top: 3px; }
+
+/* prices */
+.price { display: inline-flex; flex-direction: column; gap: 1px; font-variant-numeric: tabular-nums; }
+.price .p1 { font-weight: 650; font-size: 1.05rem; }
+.price .p2 { color: var(--muted); font-size: .86rem; }
+.price.big .p1 { font-family: var(--display); font-weight: 500; font-size: 2.1rem; letter-spacing: -.01em; line-height: 1.1; }
+.price.big .p2 { font-size: 1.05rem; }
+.price-missing { color: var(--warn); font-weight: 600; font-size: .9rem; }
+.pair { display: inline-flex; flex-direction: column; font-variant-numeric: tabular-nums; }
+.diff { display: inline-flex; flex-direction: column; font-variant-numeric: tabular-nums; }
+.diff.up b { color: var(--ok); } .diff.down b { color: var(--bad); }
+
+/* showroom */
+.shop-hero { display: grid; gap: 22px; margin-bottom: 26px; }
+.shop-hero .lede { color: var(--muted); max-width: 54ch; margin-top: 10px; font-size: 1.02rem; }
+.shop-hero h1 { margin-top: 6px; }
+.rates-strip { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; border-block: 1px solid var(--line); padding-block: 10px; }
+.rate-chips { display: flex; flex-wrap: wrap; gap: 6px 16px; font-family: var(--mono); font-size: .8rem; font-variant-numeric: tabular-nums; }
+.rate-chip b { color: var(--gold); font-weight: 500; }
+.shop-controls, .toolbar { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; margin-bottom: 14px; }
+.shop-controls .field:not(.grow), .toolbar .field:not(.grow) { flex: 0 1 170px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.chip { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 6px 14px; cursor: pointer; font-weight: 550; font-size: .88rem; }
+.chip[aria-pressed="true"] { background: var(--primary); color: var(--on-primary); border-color: var(--primary); }
+.chips.sub .chip { font-size: .8rem; padding: 4px 11px; }
+.result-count { color: var(--muted); font-size: .86rem; margin: 6px 0 14px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 18px; }
+.card { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; text-decoration: none; transition: box-shadow .2s, transform .2s; min-width: 0; }
+.card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+.card-img, .g-main, .pthumb, .ccover, .ithumb-img, .g-thumb { background: var(--surface-2); }
+.card-img { aspect-ratio: 4 / 5; }
+.card-img img, .g-main img, .pthumb img, .ccover img, .ithumb-img img, .g-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.img-ph { width: 100%; height: 100%; display: grid; place-items: center; color: var(--muted); }
+.card-body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 3px; }
+.card-type { font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); font-weight: 600; }
+.card-body h3 { font-family: var(--display); font-weight: 500; font-size: 1.2rem; line-height: 1.2; }
+.sku { font-family: var(--mono); font-size: .75rem; color: var(--muted); margin-bottom: 8px; }
+.empty { text-align: center; padding: 48px 16px; background: var(--surface); border: 1px dashed var(--line); border-radius: 10px; display: grid; gap: 10px; justify-items: center; grid-column: 1 / -1; }
+.empty p { color: var(--muted); max-width: 44ch; }
+.empty-line { padding: 18px 20px; color: var(--muted); }
+.crumbs { display: flex; flex-wrap: wrap; gap: 8px; font-size: .86rem; color: var(--muted); margin-bottom: 18px; }
+.crumbs a { color: var(--gold); font-weight: 600; }
+.detail { display: grid; gap: 28px; grid-template-columns: minmax(0, 1fr); }
+.gallery { min-width: 0; display: grid; gap: 10px; align-content: start; }
+.g-main { display: block; width: 100%; aspect-ratio: 4 / 5; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; padding: 0; cursor: zoom-in; }
+.g-thumbs { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 2px; }
+.g-thumb { flex: 0 0 72px; height: 72px; padding: 0; border: 2px solid transparent; border-radius: 8px; overflow: hidden; cursor: pointer; }
+.g-thumb[aria-pressed="true"] { border-color: var(--gold-fill); }
+.info { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.price-block { padding-block: 10px; border-block: 1px solid var(--line); }
+.price-note { color: var(--muted); font-size: .84rem; margin-top: 4px; }
+.lead { font-size: 1.05rem; }
+.body-text { color: var(--muted); max-width: 62ch; }
+.specs { display: grid; gap: 0; margin: 4px 0; }
+.specs > div { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--line); }
+.specs dt { color: var(--muted); font-size: .86rem; } .specs dd { margin: 0; font-weight: 550; overflow-wrap: anywhere; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+.related { margin-top: 48px; } .related h2 { font-family: var(--display); font-weight: 500; font-size: 1.6rem; margin-bottom: 16px; }
+.preview-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; background: var(--warn-bg); color: var(--warn); border-radius: 8px; padding: 10px 14px; margin-bottom: 18px; font-size: .9rem; }
+
+/* admin list */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; margin-bottom: 20px; }
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; display: flex; flex-direction: column; }
+.stat b { font-family: var(--display); font-weight: 500; font-size: 1.8rem; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.stat span { color: var(--muted); font-size: .84rem; } .stat.warn b { color: var(--warn); }
+.plist { display: grid; gap: 10px; }
+.prow { display: grid; grid-template-columns: 72px minmax(0, 1fr) 170px 160px; grid-template-areas: "t m p s" "a a a a"; gap: 10px 16px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px; }
+.prow.is-archived { opacity: .72; }
+.pthumb { grid-area: t; width: 72px; height: 90px; border-radius: 6px; overflow: hidden; }
+.pmain { grid-area: m; min-width: 0; } .pprice { grid-area: p; } .pstatus { grid-area: s; } .pactions { grid-area: a; display: flex; flex-wrap: wrap; gap: 6px; padding-top: 8px; border-top: 1px solid var(--line); }
+.pmain h3 { overflow-wrap: anywhere; } .meta { color: var(--muted); font-size: .84rem; display: flex; flex-wrap: wrap; gap: 4px 12px; }
+
+/* editor */
+.editor-grid { display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr); align-items: start; }
+.price-panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px; min-width: 0; }
+.price-panel h2 { margin-bottom: 12px; }
+.breakdown { margin: 0 0 12px; display: grid; gap: 0; }
+.breakdown > div { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+.breakdown dt, .breakdown dd { margin: 0; display: flex; flex-direction: column; } .breakdown dd { text-align: right; font-weight: 600; }
+.breakdown small { font-weight: 400; }
+.total { display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; padding-block: 8px 4px; }
+.total > span { font-weight: 650; color: var(--muted); font-size: .86rem; text-transform: uppercase; letter-spacing: .08em; }
+.total .price { align-items: flex-end; }
+.issues { background: var(--warn-bg); color: var(--warn); border-radius: 8px; padding: 10px 12px; font-size: .88rem; }
+.issues ul { margin: 6px 0 0; padding-left: 18px; }
+.rate-hint { background: var(--surface-2); border-radius: 8px; padding: 9px 12px; font-size: .88rem; margin-top: 4px; }
+.rate-hint.warn { background: var(--warn-bg); color: var(--warn); }
+.savebar { position: sticky; bottom: 0; z-index: 10; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px)); margin-top: 18px; box-shadow: var(--shadow); }
+.savebar-price .price { flex-direction: row; align-items: baseline; gap: 10px; }
+.dropzone { display: grid; place-items: center; text-align: center; padding: 22px 16px; border: 1.5px dashed var(--line); border-radius: 10px; cursor: pointer; color: var(--muted); margin: 8px 0 14px; background: var(--bg); }
+.dropzone.over { border-color: var(--gold-fill); background: var(--surface-2); }
+.dropzone input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.dropzone:focus-within { outline: 2px solid var(--ring); outline-offset: 2px; }
+.igrid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr)); gap: 12px; }
+.igrid-empty { color: var(--muted); grid-column: 1 / -1; }
+.ithumb { position: relative; border: 1px solid var(--line); border-radius: 9px; overflow: hidden; background: var(--surface); min-width: 0; }
+.ithumb.is-cover { border-color: var(--gold-fill); box-shadow: 0 0 0 1px var(--gold-fill); }
+.ithumb-img { display: block; width: 100%; aspect-ratio: 4 / 5; border: 0; padding: 0; cursor: zoom-in; }
+.ithumb-bar { display: flex; flex-wrap: wrap; gap: 4px; padding: 6px; align-items: center; }
+.ithumb-bar .icon-btn { width: 30px; height: 30px; } .ithumb-bar .btn { flex: 1 1 auto; }
+.badge-new, .badge-cover { position: absolute; top: 6px; left: 6px; font-size: .68rem; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: var(--warn-bg); color: var(--warn); }
+.badge-cover { left: auto; right: 6px; background: var(--primary); color: var(--on-primary); }
+
+/* gold weight: traditional units lead, grams are secondary */
+.weight { display: flex; flex-direction: column; gap: 1px; margin-bottom: 8px; }
+.w-label { font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); font-weight: 600; }
+.w-main { font-weight: 650; font-size: 1.02rem; line-height: 1.6; }
+.w-sub { color: var(--muted); font-size: .8rem; font-variant-numeric: tabular-nums; }
+.weight.big { padding: 12px 14px; background: var(--surface-2); border-radius: 8px; }
+.weight.big .w-main { font-size: 1.5rem; line-height: 1.7; }
+.weight.big .w-sub { font-size: .9rem; }
+.units { border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px 14px; margin: 0; min-width: 0; }
+.units legend { padding: 0 6px; } .units legend small { font-weight: 400; margin-left: 4px; }
+.units-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 4px; }
+.units-row label { line-height: 1.7; } .units-row label small { display: block; line-height: 1.3; font-weight: 400; }
+.weight-total { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin-top: 12px; padding: 10px 12px; background: var(--surface-2); border-radius: 8px; font-variant-numeric: tabular-nums; }
+.weight-total span { font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-weight: 650; }
+.weight-total b { font-family: var(--display); font-weight: 500; font-size: 1.5rem; }
+.weight-total.warn { background: var(--warn-bg); color: var(--warn); }
+.radios.wd { margin-bottom: 14px; } .wd-preview { max-width: 420px; display: grid; gap: 8px; margin-bottom: 16px; }
+.units-ref { max-width: 320px; }
+/* tables */
+.table-wrap { overflow-x: auto; }
+.tbl { width: 100%; border-collapse: collapse; min-width: 640px; font-variant-numeric: tabular-nums; }
+.tbl th, .tbl td { text-align: left; padding: 11px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.tbl thead th { font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-weight: 650; background: var(--bg); }
+.tbl tbody tr:last-child td, .tbl tbody tr:last-child th { border-bottom: 0; }
+.tbl td small, .tbl th small { display: block; }
+.tbl.compact th, .tbl.compact td { padding: 9px 12px; }
+.note-cell { color: var(--muted); max-width: 28ch; }
+.row-actions { white-space: nowrap; text-align: right !important; }
+.row-actions .btn + .btn { margin-left: 6px; }
+.rate-compare { display: grid; grid-template-columns: 1fr auto 1fr; gap: 12px; align-items: center; margin-bottom: 16px; }
+.rate-compare > div:not(.arrow) { background: var(--surface-2); border-radius: 8px; padding: 10px 14px; display: flex; flex-direction: column; font-variant-numeric: tabular-nums; }
+.rate-compare span { font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-weight: 650; }
+.rate-compare b { font-family: var(--display); font-weight: 500; font-size: 1.5rem; }
+.arrow { color: var(--gold); font-size: 1.4rem; }
+
+/* categories */
+.cat-list { display: grid; gap: 14px; }
+.ccard { display: grid; grid-template-columns: 96px minmax(0, 1fr); grid-template-areas: "c m" "a a"; gap: 12px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px; }
+.ccard.is-hidden { background: var(--bg); }
+.ccover { grid-area: c; width: 96px; height: 120px; border-radius: 8px; overflow: hidden; flex: none; }
+.cmain { grid-area: m; min-width: 0; display: grid; gap: 6px; align-content: start; }
+.cact { grid-area: a; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; padding-top: 10px; border-top: 1px solid var(--line); }
+.reorder { display: inline-flex; gap: 4px; margin-right: 6px; }
+.subs { list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.subs li { display: inline-flex; align-items: center; gap: 8px; background: var(--surface-2); border-radius: 999px; padding: 3px 12px; font-size: .86rem; }
+.subs .linklike { font-size: .78rem; }
+.sub-add { display: flex; gap: 6px; max-width: 340px; } .sub-add input { min-height: 32px; padding: 4px 10px; font-size: .88rem; }
+.cover-edit { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; } .cover-edit .ccover { width: 72px; height: 90px; }
+.kv { display: grid; margin: 0 0 12px; } .kv > div { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--line); } .kv dt { color: var(--muted); } .kv dd { margin: 0; }
+.plain { margin: 0; padding-left: 18px; display: grid; gap: 8px; } .plain code { font-family: var(--mono); font-size: .84rem; background: var(--surface-2); padding: 1px 6px; border-radius: 4px; }
+.panel p + .form-actions { margin-top: 14px; }
+
+/* modal, toast, misc */
+.modal-back { position: fixed; inset: 0; background: var(--scrim); display: grid; place-items: center; padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); z-index: 100; overflow: auto; }
+.modal { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; width: min(520px, 100%); max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); display: flex; flex-direction: column; box-shadow: var(--shadow); min-width: 0; }
+.modal.wide { width: min(900px, 100%); }
+.modal-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 16px 20px; border-bottom: 1px solid var(--line); }
+.modal-head h2 { font-size: 1.1rem; }
+.modal-body { padding: 18px 20px; overflow: auto; min-width: 0; }
+.modal-foot { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px; padding: 14px 20px; border-top: 1px solid var(--line); }
+.modal-text { color: var(--muted); }
+.copybox { font-family: var(--mono); font-size: .82rem; margin-top: 10px; }
+.fallback-img { text-align: center; margin: 12px 0; } .fallback-img img { max-height: 46vh; border-radius: 8px; }
+.lb { display: grid; grid-template-columns: 40px minmax(0, 1fr) 40px; gap: 8px; align-items: center; }
+.lb-img { display: grid; place-items: center; min-height: 240px; background: var(--surface-2); border-radius: 8px; overflow: hidden; } .lb-img img { max-width: 100%; max-height: 66vh; object-fit: contain; }
+.lb-count { text-align: center; color: var(--muted); margin-top: 8px; font-size: .86rem; }
+#toasts { position: fixed; left: 0; right: 0; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); display: grid; justify-items: center; gap: 8px; z-index: 200; pointer-events: none; padding-inline: max(16px, env(safe-area-inset-left, 0px)) max(16px, env(safe-area-inset-right, 0px)); }
+.toast { background: var(--primary); color: var(--on-primary); padding: 10px 16px; border-radius: 8px; box-shadow: var(--shadow); font-weight: 550; font-size: .9rem; max-width: min(520px, 100%); animation: tin .2s ease-out; }
+.toast.bad { background: var(--bad); color: var(--on-bad); } .toast.out { opacity: 0; transition: opacity .3s; }
+@keyframes tin { from { transform: translateY(8px); opacity: 0; } }
+
+@media (min-width: 640px) { .form-grid { grid-template-columns: 1fr 1fr; } .form-grid.one { grid-template-columns: 1fr; } .shop-hero { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: end; } .shop-hero .rates-strip { grid-column: 1 / -1; } }
+@media (min-width: 860px) { .detail { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 44px; } .gallery { position: sticky; top: 84px; } }
+@media (min-width: 960px) { .editor-grid { grid-template-columns: minmax(0, 1fr) 330px; } .price-panel { position: sticky; top: 84px; } }
+@media (min-width: 720px) { .ccard { grid-template-columns: 96px minmax(0, 1fr) auto; grid-template-areas: "c m a"; } .cact { border-top: 0; padding-top: 0; flex-direction: column; align-items: stretch; width: 150px; } .cact .btn { width: 100%; } .reorder { margin: 0 0 4px; } }
+@media (max-width: 719px) { .prow { grid-template-columns: 72px minmax(0, 1fr); grid-template-areas: "t m" "p s" "a a"; } .rate-compare { grid-template-columns: 1fr; } .arrow { transform: rotate(90deg); justify-self: center; } .specs > div { grid-template-columns: 90px minmax(0, 1fr); } .brand span { display: none; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } .card:hover { transform: none; } }
+
+/* ---- v3: photos, copy/share, full-screen gallery ---- */
+[data-swipe] { touch-action: pan-y; -webkit-user-select: none; user-select: none; -webkit-touch-callout: default; }
+.g-main { position: relative; }
+.g-count { position: absolute; right: 10px; bottom: 10px; background: rgba(0,0,0,.6); color: #fff; font-size: .78rem; padding: 3px 9px; border-radius: 99px; font-variant-numeric: tabular-nums; }
+.img-actions { display: flex; flex-wrap: wrap; gap: 6px; }
+.img-actions .btn { flex: 1 1 auto; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; }
+.lb-actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-top: 10px; }
+.lb-actions .btn { text-decoration: none; display: inline-flex; align-items: center; }
+.lb-nav { width: 40px; height: 56px; border: 0; background: transparent; color: var(--ink); font-size: 2.2rem; cursor: pointer; border-radius: 8px; }
+.lb-nav:hover { background: var(--surface-2); } .lb-nav[hidden] { display: none; }
+.modal-back.full { padding: 0; }
+.modal.full { width: 100%; height: 100%; max-height: none; border-radius: 0; border: 0; }
+.modal.full .modal-body { overflow: auto; display: flex; flex-direction: column; justify-content: center; }
+.modal.full .lb-img { min-height: 50vh; } .modal.full .lb-img img { max-height: 72vh; max-height: 72dvh; }
+.modal-text { line-height: 1.5; }
+.opt-list { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 10px; }
+.opt-row { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 12px; align-items: center; }
+.opt-thumb { width: 64px; aspect-ratio: 4 / 5; background: var(--surface-2); border-radius: 6px; overflow: hidden; } .opt-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.opt-btns { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; } .opt-btns .btn { text-decoration: none; display: inline-flex; align-items: center; } .opt-name { flex: 1 0 100%; font-weight: 600; font-size: .9rem; }
+.igrid-all { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px; }
+.card.static { pointer-events: none; } .card.static:hover { transform: none; box-shadow: none; }
+.price-panel .card { max-width: 280px; }
+
+/* ---- v4: server mode ---- */
+.tabbar { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 6px 16px; border-bottom: 1px solid var(--line); margin-bottom: 24px; }
+.tabbar .tabs { border-bottom: 0; margin-bottom: 0; min-width: 0; }
+.who-box { display: flex; align-items: center; gap: 6px; padding-bottom: 6px; } .who { font-weight: 600; font-size: .9rem; margin-right: 4px; }
+.login { max-width: 380px; margin: 8vh auto 0; } .login .panel { display: grid; gap: 14px; }
+.login input { font-size: 1.6rem; letter-spacing: .4em; text-align: center; }
+</style>
+<div id="banner" class="banner gut" hidden role="status"></div>
+<header id="topbar"><div class="bar-inner gut">
+  <div class="brand"><b>Cheong Sarak</b><span>Fine Jewelry</span></div>
+  <div class="seg" role="group" aria-label="View"><button data-act="nav-mode" data-mode="shop" aria-current="page">Showroom</button><button data-act="nav-mode" data-mode="admin" aria-current="false">Admin</button></div>
+  <button class="icon-btn" id="theme-btn" data-act="theme" aria-label="Change theme" data-mode="system"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.8"/><path class="half" d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/><circle class="full" cx="12" cy="12" r="8" fill="currentColor" opacity="0"/></svg></button>
+  <span class="demo-pill" id="demo-pill" title="Sample data, stored in this browser only">DEMO MODE</span>
+</div></header>
+<main id="app" class="gut" aria-live="polite"><p class="sub">Loading catalog…</p></main>
+<footer class="foot gut" id="foot"><b>DEMO MODE</b> &nbsp;Sample pieces and prices. Data is stored only in this browser..</footer>
+<div id="toasts" aria-live="polite" role="status"></div>
+<script>/* After you deploy the Google server, paste its Web app URL between the quotes, once, then host this file. Every phone and computer then uses the server. */ window.CATALOG_CONFIG = window.CATALOG_CONFIG || { apiUrl: "https://script.google.com/macros/s/AKfycbzf_eL-egE1AaxfGWl-HFs6ffD9uA4ygdxbdea7skz1kumkzQ4qhjJeHEYAipRwZYo8/exec" };</script>
+<script>
+/* =====================================================================
+   CATALOG MATH  (pure functions, no DOM, no storage)
+   Traditional Cambodian gold weights + manual selling price formatting.
+   The same file runs in the browser and in Google Apps Script (Units.gs),
+   so the constants and the formula can never drift apart.
+   There is no exchange rate and no automatic currency conversion.
+   ===================================================================== */
+(function (root) {
+  'use strict';
+
+  /* Official conversions */
+  var UNIT = { CHI_G: 3.75, HUN_G: 0.375, LI_G: 0.0375 };
+
+  /* A selling price is entered by hand in one currency and shown exactly as entered. */
+  var CURRENCIES = {
+    USD: { symbol: '$', name: 'US dollar' },
+    KHR: { symbol: '\u17DB', name: 'Cambodian riel' },
+    THB: { symbol: '\u0E3F', name: 'Thai baht' }
+  };
+
+  var GOLD_TYPES = ['gold', 'gold_diamond'];
+  var DIAMOND_TYPES = ['diamond', 'gold_diamond'];
+  function hasGold(type) { return GOLD_TYPES.indexOf(type) >= 0; }
+  function hasDiamond(type) { return DIAMOND_TYPES.indexOf(type) >= 0; }
+
+  /** '' / null -> null (blank), invalid text -> NaN, otherwise a finite number. */
+  function parseAmount(v) {
+    if (v === null || v === undefined) return null;
+    if (typeof v === 'number') return isFinite(v) ? v : NaN;
+    var s = String(v).trim().replace(/,/g, '');
+    if (s === '') return null;
+    if (!/^[+-]?(\d+\.?\d*|\.\d+)$/.test(s)) return NaN;
+    return Number(s);
+  }
+
+  function clean(x) { return Number(x.toPrecision(14)); } // removes binary float noise only
+
+  /** Total grams = (Hun x 0.375) + (Chi x 3.75) + (Li x 0.0375). Full precision. */
+  function unitsToGrams(hun, chi, li) {
+    return clean(hun * UNIT.HUN_G + chi * UNIT.CHI_G + li * UNIT.LI_G);
+  }
+
+  /**
+   * Reads the stored traditional inputs (gold_hun, gold_chi, gold_li).
+   * Blank counts as zero. Non-numeric text or a negative number is an error.
+   * gold_weight_grams is derived data and is never read here.
+   */
+  function parseUnits(p) {
+    var out = { hun: 0, chi: 0, li: 0, errors: {}, grams: null };
+    [['hun', p.gold_hun, '\u17A0\u17CA\u17BB\u1793 (Hun)'], ['chi', p.gold_chi, '\u1787\u17B8 (Chi)'], ['li', p.gold_li, '\u179B\u17B8 (Li)']].forEach(function (u) {
+      var v = parseAmount(u[1]);
+      if (v === null) v = 0;
+      else if (isNaN(v)) { out.errors[u[0]] = u[2] + ' must be a number, for example 1 or 2.5.'; return; }
+      else if (v < 0) { out.errors[u[0]] = u[2] + ' cannot be negative.'; return; }
+      out[u[0]] = v;
+    });
+    if (!Object.keys(out.errors).length) out.grams = unitsToGrams(out.hun, out.chi, out.li);
+    return out;
+  }
+
+  /** Thousands separators without Intl, which Apps Script does not provide. */
+  function fmtFixed(v, digits) {
+    var parts = v.toFixed(digits).split('.');
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return parts.join('.');
+  }
+
+  /**
+   * Validates and formats the manually entered selling price. No conversion.
+   * Whole amounts show without decimals; amounts with cents show two decimals.
+   * returns { ok, value, currency, text, issue }
+   */
+  function parsePrice(price) {
+    var out = { ok: false, value: null, currency: null, text: '', issue: '' };
+    var cur = price && price.currency;
+    var v = parseAmount(price ? price.value : null);
+    if (v === null) { out.issue = 'No selling price entered.'; return out; }
+    if (isNaN(v)) { out.issue = 'The selling price is not a valid number.'; return out; }
+    if (v < 0) { out.issue = 'The selling price cannot be negative.'; return out; }
+    if (v === 0) { out.issue = 'The selling price must be greater than zero.'; return out; }
+    if (!CURRENCIES[cur]) { out.issue = 'Choose a currency for the selling price.'; return out; }
+    out.ok = true; out.value = v; out.currency = cur;
+    var whole = Math.abs(v - Math.round(v)) < 1e-9;
+    out.text = CURRENCIES[cur].symbol + fmtFixed(v, whole ? 0 : 2);
+    return out;
+  }
+
+  var api = {
+    UNIT: UNIT, CURRENCIES: CURRENCIES, parseAmount: parseAmount, unitsToGrams: unitsToGrams, parseUnits: parseUnits,
+    parsePrice: parsePrice, hasGold: hasGold, hasDiamond: hasDiamond
+  };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+  else root.CatalogMath = api;
+})(typeof window !== 'undefined' ? window : globalThis);
+/* =====================================================================
+   CORE: constants, helpers, storage (localStorage + IndexedDB), seed data
+   Phase 2 seams: `Repo` (data) and `Images` (files) are the only places that
+   touch browser storage. Swap them for Google Sheets / Drive adapters later.
+   ===================================================================== */
+'use strict';
+
+const KEY = 'aurelle-catalog-demo-v2';
+const THEME_KEY = 'aurelle-catalog-theme';
+const PURITIES = ['24K', '22K', '18K', '14K', '9K'];
+const TYPES = { gold: 'Gold', diamond: 'Diamond', gold_diamond: 'Gold + Diamond', other: 'Other Jewelry' };
+const STATUS_LABEL = { published: 'Published', hidden: 'Hidden', archived: 'Archived' };
+
+/* ---------- helpers ---------- */
+const $ = (s, r) => (r || document).querySelector(s);
+const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
+const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const uid = (p) => p + '_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+const nowISO = () => new Date().toISOString();
+const todayStr = () => { const d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); };
+const fmtNum = (n) => Number(n).toLocaleString('en-US', { maximumFractionDigits: 3 });
+const fmtDateTime = (iso) => { try { return new Date(iso).toLocaleString('en-GB', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }); } catch (e) { return iso; } };
+const fmtDate = (s) => { try { return new Date(s + 'T00:00:00').toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }); } catch (e) { return s; } };
+const clone = (o) => JSON.parse(JSON.stringify(o));
+const debounce = (fn, ms) => { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; };
+const PX = CatalogMath.parseAmount;
+
+/* ---------- state ---------- */
+let S = null;
+let storageOk = true;
+
+const Repo = {
+  load() {
+    try {
+      const raw = localStorage.getItem(KEY);
+      if (raw) { const d = JSON.parse(raw); if (d && d.v === 2 && d.products && d.categories) return d; }
+    } catch (e) { storageOk = false; }
+    return null;
+  },
+  save(state) {
+    try { localStorage.setItem(KEY, JSON.stringify(state)); storageOk = true; }
+    catch (e) { storageOk = false; }
+    updateStorageBanner();
+  },
+  clear() { try { localStorage.removeItem(KEY); } catch (e) { /* ignore */ } }
+};
+/** Demo mode saves to this browser. Connected mode sends every change to the server. Always resolves { ok }. */
+const persist = () => (isRemote() ? Sync.flush() : (Repo.save(S), Promise.resolve({ ok: true })));
+
+/* ---------- image store (IndexedDB, with in-memory fallback) ---------- */
+const Images = {
+  db: null, ok: false, cache: new Map(),
+  _req(r) { return new Promise((res, rej) => { r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); }); },
+  _store(mode) { return this.db.transaction('images', mode).objectStore('images'); },
+  async init() {
+    try {
+      this.db = await new Promise((res, rej) => {
+        const r = indexedDB.open('aurelle-demo-images', 1);
+        r.onupgradeneeded = () => r.result.createObjectStore('images', { keyPath: 'id' });
+        r.onsuccess = () => res(r.result);
+        r.onerror = () => rej(r.error);
+        r.onblocked = () => rej(new Error('blocked'));
+      });
+      this.ok = true;
+      const all = await this._req(this._store('readonly').getAll());
+      all.forEach((rec) => this.cache.set(rec.id, { blob: rec.blob, url: URL.createObjectURL(rec.blob), name: rec.name || 'image' }));
+    } catch (e) { this.ok = false; }
+  },
+  async put(id, blob, name) {
+    const old = this.cache.get(id);
+    if (old) URL.revokeObjectURL(old.url);
+    this.cache.set(id, { blob, url: URL.createObjectURL(blob), name: name || 'image' });
+    if (this.ok) { try { await this._req(this._store('readwrite').put({ id, blob, name: name || 'image', type: blob.type })); } catch (e) { this.ok = false; updateStorageBanner(); } }
+  },
+  url(id) { const c = this.cache.get(id); return c ? c.url : null; },
+  async remove(id) {
+    const c = this.cache.get(id);
+    if (c) { URL.revokeObjectURL(c.url); this.cache.delete(id); }
+    if (this.ok) { try { await this._req(this._store('readwrite').delete(id)); } catch (e) { /* ignore */ } }
+  },
+  async clear() {
+    this.cache.forEach((c) => URL.revokeObjectURL(c.url));
+    this.cache.clear();
+    if (this.ok) { try { await this._req(this._store('readwrite').clear()); } catch (e) { /* ignore */ } }
+  },
+  totalBytes() { let n = 0; this.cache.forEach((c) => { n += c.blob.size; }); return n; }
+};
+
+/** Object URLs for files picked but not yet saved. Released on save, cancel or removal. */
+const Pending = {
+  map: new Map(),
+  add(blob, name) { const id = uid('i'); this.map.set(id, { blob, name, url: URL.createObjectURL(blob) }); return id; },
+  has(id) { return this.map.has(id); },
+  release(id) { const p = this.map.get(id); if (p) { URL.revokeObjectURL(p.url); this.map.delete(id); } },
+  releaseAll() { Array.from(this.map.keys()).forEach((id) => this.release(id)); this.uploaded.clear(); },
+  uploaded: new Map(),
+  /** Saves picked photos. Demo: into browser storage, same ids. Connected: uploads to Drive and returns { pendingId: driveId }. */
+  async commit(ids) {
+    const map = {};
+    for (const id of ids) {
+      const p = this.map.get(id);
+      if (!p) continue;
+      if (isRemote()) { if (!this.uploaded.has(id)) this.uploaded.set(id, await uploadPending(id)); map[id] = this.uploaded.get(id); }
+      else { await Images.put(id, p.blob, p.name); this.release(id); }
+    }
+    return map;
+  }
+};
+const imgSrc = (id, size) => (Pending.has(id) ? Pending.map.get(id).url : (isRemote() ? imageUrl(id, size) : Images.url(id)));
+const imgBlob = (id) => (Pending.has(id) ? Pending.map.get(id).blob : (Images.cache.get(id) || {}).blob);
+
+async function gcImages() {
+  if (isRemote()) return; // the server trashes photos nobody uses
+  const used = new Set();
+  S.products.forEach((p) => (p.images || []).forEach((i) => used.add(i)));
+  S.categories.forEach((c) => c.cover && used.add(c.cover));
+  for (const id of Array.from(Images.cache.keys())) if (!used.has(id)) await Images.remove(id);
+}
+
+async function prepareImage(file) {
+  if (!/^image\//.test(file.type)) throw new Error('not-image');
+  if (file.type === 'image/svg+xml' || file.type === 'image/gif') return file;
+  try {
+    const bmp = await createImageBitmap(file);
+    const max = 1600;
+    const sc = Math.min(1, max / Math.max(bmp.width, bmp.height));
+    if (sc === 1 && file.size < 1500000) { if (bmp.close) bmp.close(); return file; }
+    const c = document.createElement('canvas');
+    c.width = Math.round(bmp.width * sc); c.height = Math.round(bmp.height * sc);
+    c.getContext('2d').drawImage(bmp, 0, 0, c.width, c.height);
+    if (bmp.close) bmp.close();
+    const type = file.type === 'image/png' ? 'image/png' : 'image/jpeg';
+    const blob = await new Promise((r) => c.toBlob(r, type, 0.88));
+    return blob || file;
+  } catch (e) { return file; }
+}
+
+/* ---------- selectors ---------- */
+const byId = (id) => S.products.find((p) => p.id === id);
+const catById = (id) => S.categories.find((c) => c.id === id);
+const catName = (id) => { const c = catById(id); return c ? c.name : 'Unassigned'; };
+const subName = (cid, sid) => { const c = catById(cid); const s = c && c.subs.find((x) => x.id === sid); return s ? s.name : ''; };
+const sortedCats = () => S.categories.slice().sort((a, b) => a.order - b.order);
+const visibleCats = () => sortedCats().filter((c) => !c.hidden);
+const hasGold = (t) => CatalogMath.hasGold(t);
+const hasDiamond = (t) => CatalogMath.hasDiamond(t);
+
+/** The selling price is typed in by hand and shown as entered. No conversion anywhere. */
+const priceInfo = (p) => CatalogMath.parsePrice(p.price);
+
+function isPublic(p) {
+  if (p.status !== 'published') return false;
+  const c = catById(p.categoryId);
+  if (!c || c.hidden) return false;
+  return priceInfo(p).ok;
+}
+function whyNotPublic(p) {
+  const out = [];
+  if (p.status !== 'published') out.push('status is ' + STATUS_LABEL[p.status].toLowerCase());
+  const c = catById(p.categoryId);
+  if (!c) out.push('no category'); else if (c.hidden) out.push('its category is hidden');
+  if (!priceInfo(p).ok) out.push('no valid selling price');
+  return out;
+}
+function galleryIds(p) {
+  const ids = (p.images || []).slice();
+  if (p.cover && ids.indexOf(p.cover) > 0) { ids.splice(ids.indexOf(p.cover), 1); ids.unshift(p.cover); }
+  return ids;
+}
+const coverId = (p) => galleryIds(p)[0] || null;
+
+const fmtG = (n) => Number(n).toLocaleString('en-US', { maximumFractionDigits: 4 });
+const fmtU = (n) => Number(n).toLocaleString('en-US', { maximumFractionDigits: 4 });
+const WEIGHT_MODES = { both: 'Traditional units with grams in secondary text', traditional: 'Traditional units only', grams: 'Grams only' };
+
+/** Customer-facing order is \u1787\u17B8, \u17A0\u17CA\u17BB\u1793, \u179B\u17B8. Values are shown as entered; zero units are left out. */
+function traditionalText(p) {
+  const u = CatalogMath.parseUnits(p), parts = [];
+  if (u.chi > 0) parts.push(fmtU(u.chi) + ' \u1787\u17B8');
+  if (u.hun > 0) parts.push(fmtU(u.hun) + ' \u17A0\u17CA\u17BB\u1793');
+  if (u.li > 0) parts.push(fmtU(u.li) + ' \u179B\u17B8');
+  return parts.length ? parts.join(' ') : '0 \u1787\u17B8';
+}
+/** { main, sub } according to the catalog weight setting. Grams always come from the full-precision derived value. */
+function weightLines(p, settings) {
+  if (!hasGold(p.type)) return null;
+  const u = CatalogMath.parseUnits(p); if (u.grams === null) return null;
+  const mode = (settings || S.settings).weightDisplay || 'both', g = fmtG(u.grams) + ' g';
+  if (mode === 'grams') return { main: g, sub: '' };
+  return { main: traditionalText(p), sub: mode === 'both' ? 'Equivalent weight: ' + g : '' };
+}
+function materialsText(p) {
+  const parts = [];
+  if (hasGold(p.type)) parts.push((p.purity || '') + ' gold');
+  if (hasDiamond(p.type)) parts.push('Diamond ' + fmtNum(PX(p.diamondCarat) || 0) + ' ct');
+  if (!parts.length) parts.push(TYPES[p.type] || 'Jewelry');
+  return parts.join(' + ');
+}
+/* ---------- seed art (generated SVG so the demo has pictures without any uploads) ---------- */
+function artSvg(kind, variant, metal) {
+  const M = { gold: ['#FBE9B0', '#D6AA43', '#8C6613'], white: ['#FFFFFF', '#C4CCD2', '#7D878E'], rose: ['#F6D9CB', '#CD8F70', '#8F563B'] }[metal || 'gold'];
+  const BG = [['#EDF0EC', '#CBD4CD'], ['#1B2925', '#0E1715'], ['#E4E9EE', '#BFC9D4']][variant % 3];
+  const defs = '<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="' + BG[0] + '"/><stop offset="1" stop-color="' + BG[1] + '"/></linearGradient>' +
+    '<linearGradient id="m" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="' + M[0] + '"/><stop offset=".5" stop-color="' + M[1] + '"/><stop offset="1" stop-color="' + M[2] + '"/></linearGradient>' +
+    '<linearGradient id="d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".55" stop-color="#C9E3F2"/><stop offset="1" stop-color="#8FB9D6"/></linearGradient>' +
+    '<radialGradient id="p" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#D3D0CA"/></radialGradient></defs>';
+  const gem = (cx, cy, s) => {
+    const pts = [[cx - s, cy], [cx - s * .55, cy - s * .7], [cx + s * .55, cy - s * .7], [cx + s, cy], [cx, cy + s * 1.05]].map((q) => q.join(',')).join(' ');
+    return '<polygon points="' + pts + '" fill="url(#d)" stroke="#6C93AE" stroke-width="2"/>' +
+      '<path d="M' + (cx - s) + ' ' + cy + 'H' + (cx + s) + 'M' + (cx - s * .55) + ' ' + (cy - s * .7) + 'L' + (cx - s * .25) + ' ' + cy + 'L' + cx + ' ' + (cy + s * 1.05) + 'L' + (cx + s * .25) + ' ' + cy + 'L' + (cx + s * .55) + ' ' + (cy - s * .7) + '" fill="none" stroke="#6C93AE" stroke-opacity=".55" stroke-width="2"/>';
+  };
+  const curve = (t) => ({ x: 150 + 500 * t, y: 200 + 620 * (1 - Math.pow(2 * t - 1, 2)) });
+  let g = '';
+  if (kind === 'ring' || kind === 'halo') {
+    g += '<ellipse cx="400" cy="660" rx="175" ry="195" fill="none" stroke="url(#m)" stroke-width="38"/>';
+    g += '<ellipse cx="394" cy="654" rx="175" ry="195" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="5"/>';
+    if (kind === 'halo') for (let i = 0; i < 12; i++) { const a = i / 12 * Math.PI * 2; g += '<circle cx="' + (400 + Math.cos(a) * 98) + '" cy="' + (418 + Math.sin(a) * 98) + '" r="15" fill="url(#d)" stroke="#6C93AE" stroke-width="1.5"/>'; }
+    g += '<rect x="372" y="440" width="56" height="60" rx="10" fill="url(#m)"/>' + gem(400, 400, 66);
+  } else if (kind === 'band' || kind === 'eternity') {
+    g += '<ellipse cx="400" cy="600" rx="190" ry="215" fill="none" stroke="url(#m)" stroke-width="64"/>';
+    g += '<ellipse cx="392" cy="592" rx="190" ry="215" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="6"/>';
+    if (kind === 'eternity') for (let i = 0; i < 9; i++) { const a = -Math.PI / 2 + (i - 4) * 0.2; g += '<circle cx="' + (400 + Math.cos(a) * 190) + '" cy="' + (600 + Math.sin(a) * 215) + '" r="15" fill="url(#d)" stroke="#6C93AE" stroke-width="1.5"/>'; }
+  } else if (kind === 'pendant' || kind === 'heart') {
+    g += '<path d="M170 110 Q400 640 630 110" fill="none" stroke="url(#m)" stroke-width="9" stroke-linecap="round"/>';
+    if (kind === 'heart') g += '<path d="M400 760 C230 640 270 500 340 500 C375 500 395 525 400 545 C405 525 425 500 460 500 C530 500 570 640 400 760Z" fill="url(#m)"/>' + gem(400, 600, 36);
+    else g += '<path d="M400 440 C470 540 520 600 520 660 A120 120 0 0 1 280 660 C280 600 330 540 400 440Z" fill="url(#m)"/>' + gem(400, 650, 58);
+  } else if (kind === 'studs') {
+    [[270, 520], [530, 520]].forEach((c) => { g += '<circle cx="' + c[0] + '" cy="' + c[1] + '" r="78" fill="url(#m)"/>' + gem(c[0], c[1] - 8, 50); });
+  } else if (kind === 'drops') {
+    [[280, 300], [520, 300]].forEach((c) => {
+      g += '<circle cx="' + c[0] + '" cy="' + c[1] + '" r="30" fill="url(#m)"/>' + gem(c[0], c[1], 20);
+      g += '<line x1="' + c[0] + '" y1="' + (c[1] + 30) + '" x2="' + c[0] + '" y2="' + (c[1] + 140) + '" stroke="url(#m)" stroke-width="7"/>';
+      g += '<path d="M' + c[0] + ' ' + (c[1] + 140) + ' C' + (c[0] + 70) + ' ' + (c[1] + 250) + ' ' + (c[0] + 90) + ' ' + (c[1] + 320) + ' ' + c[0] + ' ' + (c[1] + 390) + ' C' + (c[0] - 90) + ' ' + (c[1] + 320) + ' ' + (c[0] - 70) + ' ' + (c[1] + 250) + ' ' + c[0] + ' ' + (c[1] + 140) + 'Z" fill="url(#m)"/>' + gem(c[0], c[1] + 300, 34);
+    });
+  } else if (kind === 'chain') {
+    for (let i = 0; i <= 60; i++) { const t = i / 60, a = curve(t), b = curve(Math.min(1, t + 0.01)); const ang = Math.atan2(b.y - a.y, b.x - a.x) * 180 / Math.PI + (i % 2 ? 90 : 0); g += '<ellipse cx="' + a.x + '" cy="' + a.y + '" rx="17" ry="9" transform="rotate(' + ang + ' ' + a.x + ' ' + a.y + ')" fill="none" stroke="url(#m)" stroke-width="6"/>'; }
+  } else if (kind === 'pearls') {
+    for (let i = 0; i <= 17; i++) { const a = curve(i / 17); g += '<circle cx="' + a.x + '" cy="' + a.y + '" r="36" fill="url(#p)" stroke="#BDB9B2" stroke-width="1.5"/>'; }
+    g += '<rect x="372" y="838" width="56" height="26" rx="13" fill="url(#m)"/>';
+  } else if (kind === 'bracelet' || kind === 'bangle') {
+    g += '<ellipse cx="400" cy="560" rx="260" ry="150" fill="none" stroke="url(#m)" stroke-width="' + (kind === 'bangle' ? 46 : 20) + '"/>';
+    if (kind === 'bracelet') for (let i = 0; i < 26; i++) { const a = i / 26 * Math.PI * 2; g += '<circle cx="' + (400 + Math.cos(a) * 260) + '" cy="' + (560 + Math.sin(a) * 150) + '" r="19" fill="url(#d)" stroke="url(#m)" stroke-width="5"/>'; }
+    else g += '<ellipse cx="392" cy="552" rx="260" ry="150" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="5"/>';
+  }
+  const tf = [null, 'rotate(-12 400 500) scale(1.06)', 'translate(400 470) scale(1.45) translate(-400 -470)'][variant % 3];
+  return '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">' + defs +
+    '<rect width="800" height="1000" fill="url(#bg)"/><ellipse cx="400" cy="915" rx="230" ry="24" fill="#000" opacity=".10"/>' +
+    '<g' + (tf ? ' transform="' + tf + '"' : '') + '>' + g + '</g></svg>';
+}
+
+/* ---------- seed data ---------- */
+function buildSeed() {
+  const t0 = Date.now(), H = 3600000;
+  const iso = (n) => new Date(t0 - n * H).toISOString();
+  const cats = [
+    { id: 'c_rings', name: 'Rings', description: 'Engagement, wedding and statement rings.', subs: [{ id: 's_eng', name: 'Engagement' }, { id: 's_wed', name: 'Wedding bands' }, { id: 's_stm', name: 'Statement' }] },
+    { id: 'c_neck', name: 'Necklaces & Pendants', description: 'Chains, pendants and pearl strands.', subs: [{ id: 's_pend', name: 'Pendants' }, { id: 's_chain', name: 'Chains' }] },
+    { id: 'c_ears', name: 'Earrings', description: 'Studs and drops, from everyday to evening.', subs: [{ id: 's_stud', name: 'Studs' }, { id: 's_drop', name: 'Drops' }] },
+    { id: 'c_brace', name: 'Bracelets', description: 'Bangles and tennis bracelets.', subs: [{ id: 's_bang', name: 'Bangles' }, { id: 's_tenn', name: 'Tennis' }] },
+    { id: 'c_heri', name: 'Heritage (seasonal)', description: 'Reserved for the next seasonal release.', subs: [], hidden: true }
+  ].map((c, i) => Object.assign({ cover: null, hidden: false, order: i }, c));
+
+  const seedImgs = [];
+  let n = 0;
+  const imgs = (kind, metal, count) => { const ids = []; for (let v = 0; v < count; v++) { const id = 'i_seed_' + (++n); seedImgs.push({ id, svg: artSvg(kind, v, metal), name: kind + '-' + (v + 1) + '.svg' }); ids.push(id); } return ids; };
+  let k = 0;
+  const P = (value, currency) => ({ value: String(value), currency: currency || 'USD' });
+  const mk = (o) => {
+    const ids = imgs(o.art, o.metal, o.nimg || 3);
+    k += 1;
+    if (o.w) { o.gold_hun = o.w[0]; o.gold_chi = o.w[1]; o.gold_li = o.w[2]; o.gold_weight_grams = CatalogMath.unitsToGrams(o.w[0], o.w[1], o.w[2]); delete o.w; }
+    return Object.assign({
+      id: 'p_seed' + k, shortDesc: '', fullDesc: '', purity: '', gold_hun: '', gold_chi: '', gold_li: '', gold_weight_grams: '',
+      diamondCarat: '', diamondDetails: '', price: P('', 'USD'),
+      images: ids, cover: ids[0], status: 'published', createdAt: iso(200 - k * 5), updatedAt: iso(k * 7)
+    }, o);
+  };
+  const products = [
+    mk({ sku: 'AUR-R-001', name: 'Solitaire Halo Ring', art: 'halo', type: 'gold_diamond', categoryId: 'c_rings', subId: 's_eng', purity: '18K', w: [9, 0, 6], diamondCarat: '0.50', diamondDetails: 'Round brilliant, G colour, VS2 clarity, twelve-stone halo', price: P(1980), shortDesc: 'A round brilliant ringed by twelve smaller stones.', fullDesc: 'A half-carat round brilliant centre stone set in a twelve-stone halo on a slim 18K band. Finished by hand. Resizing available on request.' }),
+    mk({ sku: 'AUR-R-002', name: 'Classic Wedding Band', art: 'band', type: 'gold', categoryId: 'c_rings', subId: 's_wed', purity: '18K', w: [1, 1, 2], price: P(620), shortDesc: 'Plain 3 mm comfort-fit band in 18K gold.', fullDesc: 'A comfort-fit band with a high polish. Available in sizes 48 to 64.', nimg: 2 }),
+    mk({ sku: 'AUR-R-003', name: 'Trellis Eternity Band', art: 'eternity', metal: 'white', type: 'gold_diamond', categoryId: 'c_rings', subId: 's_wed', purity: '18K', w: [7, 0, 4], diamondCarat: '0.75', diamondDetails: 'Nine round diamonds, channel set', price: P(2150), shortDesc: 'Nine channel-set diamonds on white 18K gold.' }),
+    mk({ sku: 'AUR-R-004', name: 'Infinity Knot Ring', art: 'band', metal: 'rose', type: 'gold', categoryId: 'c_rings', subId: 's_stm', purity: '14K', w: [5, 1, 8], price: P(480), shortDesc: 'A woven knot in 14K rose gold.', nimg: 2 }),
+    mk({ sku: 'AUR-R-005', name: 'Sapphire Cocktail Ring', art: 'ring', metal: 'white', type: 'other', categoryId: 'c_rings', subId: 's_stm', price: P(1250), shortDesc: 'One-of-a-kind cocktail ring with a blue sapphire.', fullDesc: 'A single oval sapphire in a white-metal setting. Priced in US dollars.', nimg: 2 }),
+    mk({ sku: 'AUR-E-001', name: 'Round Brilliant Studs', art: 'studs', metal: 'white', type: 'diamond', categoryId: 'c_ears', subId: 's_stud', diamondCarat: '0.30', diamondDetails: 'Two 0.15 ct round brilliants, four-prong set', price: P(890), shortDesc: 'A matched pair of 0.15 ct stones, four-prong set.', fullDesc: 'Diamond-only piece, so no gold weight is listed. Total carat weight 0.30.', nimg: 2 }),
+    mk({ sku: 'AUR-E-002', name: 'Cascade Drop Earrings', art: 'drops', type: 'gold_diamond', categoryId: 'c_ears', subId: 's_drop', purity: '18K', w: [3, 1, 6], diamondCarat: '0.64', diamondDetails: 'Pear-shaped drops with round accent stones', price: P(2640), shortDesc: 'Pear drops that move with you.' }),
+    mk({ sku: 'AUR-N-001', name: 'Rope Chain, 20 in', art: 'chain', type: 'gold', categoryId: 'c_neck', subId: 's_chain', purity: '24K', w: [8, 3, 4], price: P(1640), shortDesc: 'Solid 24K rope chain with a lobster clasp.', fullDesc: 'High-purity gold chain, 20 inches (51 cm).' }),
+    mk({ sku: 'AUR-N-002', name: 'Heart Pendant', art: 'heart', type: 'gold', categoryId: 'c_neck', subId: 's_pend', purity: '9K', w: [6, 0, 4], price: P(980000, 'KHR'), shortDesc: 'A small 9K heart on a fine chain.', fullDesc: 'This piece is priced in Cambodian riel to show the riel symbol.', nimg: 2 }),
+    mk({ sku: 'AUR-N-003', name: 'Anniversary Pendant', art: 'pendant', metal: 'white', type: 'gold_diamond', categoryId: 'c_neck', subId: 's_pend', purity: '18K', w: [5, 0, 9], diamondCarat: '0.40', diamondDetails: 'Teardrop centre stone', price: P(18500, 'THB'), shortDesc: 'Teardrop pendant priced in Thai baht.', fullDesc: 'Priced in baht to show the baht symbol. Nothing is converted.' }),
+    mk({ sku: 'AUR-N-004', name: 'Freshwater Pearl Strand', art: 'pearls', type: 'other', categoryId: 'c_neck', subId: 's_chain', price: P(325.5), shortDesc: 'Seventeen matched pearls, gold-plated clasp.', nimg: 2 }),
+    mk({ sku: 'AUR-B-001', name: 'Tennis Bracelet', art: 'bracelet', metal: 'white', type: 'gold_diamond', categoryId: 'c_brace', subId: 's_tenn', purity: '18K', w: [5, 2, 11], diamondCarat: '2.10', diamondDetails: '26 round brilliants in a continuous line', price: P(5400), shortDesc: 'A continuous line of 26 round diamonds.' }),
+    mk({ sku: 'AUR-B-002', name: 'Plain Bangle, 22K', art: 'bangle', type: 'gold', categoryId: 'c_brace', subId: 's_bang', purity: '22K', w: [0, 4, 5], status: 'hidden', shortDesc: 'Draft with no selling price yet.', fullDesc: 'Add a selling price in the editor before publishing.', nimg: 2 }),
+    mk({ sku: 'AUR-R-006', name: 'Vintage Signet Ring', art: 'band', type: 'gold', categoryId: 'c_rings', subId: 's_stm', purity: '14K', w: [7, 1, 0], price: P(540), status: 'archived', shortDesc: 'Archived piece from an earlier season.', nimg: 1 })
+  ];
+  return { state: { v: 2, settings: { weightDisplay: 'both' }, categories: cats, products }, images: seedImgs };
+}
+
+async function writeSeedImages(list) {
+  for (const it of list) await Images.put(it.id, new Blob([it.svg], { type: 'image/svg+xml' }), it.name);
+}
+/* =====================================================================
+   UI BASE: view state, router, modal, toast, copy / share / save, gallery, showroom
+   ===================================================================== */
+const V = {
+  mode: 'shop', tab: 'products', pid: null, preview: false, gi: 0, edit: null,
+  shop: { q: '', cat: 'all', sub: 'all', type: 'all', sort: 'recent' },
+  adm: { q: '', cat: 'all', type: 'all', purity: 'all', status: 'active', sort: 'updated' }
+};
+const app = () => $('#app');
+const handlers = {};
+const ADMIN_TAB_IDS = ['products', 'categories', 'settings', 'staff', 'demo'];
+
+/* ---------- router (hash tokens only: letters, digits, - _ ~) ---------- */
+function hashFor() {
+  if (V.mode === 'shop') return V.pid ? (V.preview ? 'preview~' : 'shop~') + V.pid : 'shop';
+  return V.tab === 'products' ? 'admin' : 'admin-' + V.tab;
+}
+function writeHash() { try { const h = hashFor(); if (location.hash.slice(1) !== h) location.hash = h; } catch (e) { /* sandboxed */ } }
+function readHash() {
+  let t = '';
+  try { t = location.hash.slice(1); } catch (e) { /* ignore */ }
+  const next = { mode: 'shop', tab: V.tab, pid: null, preview: false };
+  if (t.indexOf('shop~') === 0) next.pid = t.slice(5);
+  else if (t.indexOf('preview~') === 0) { next.pid = t.slice(8); next.preview = true; }
+  else if (t === 'admin') { next.mode = 'admin'; next.tab = 'products'; }
+  else if (t.indexOf('admin-') === 0 && ADMIN_TAB_IDS.indexOf(t.slice(6)) > 0) { next.mode = 'admin'; next.tab = t.slice(6); }
+  return next;
+}
+function go(partial) {
+  Pending.releaseAll();
+  V.edit = null;
+  Object.assign(V, partial);
+  if (V.mode === 'admin') V.pid = null;
+  writeHash();
+  render();
+  window.scrollTo(0, 0);
+}
+window.addEventListener('hashchange', () => {
+  const n = readHash();
+  if (n.mode === V.mode && n.tab === V.tab && n.pid === V.pid && n.preview === V.preview) return;
+  if (V.edit) { Pending.releaseAll(); V.edit = null; }
+  Object.assign(V, n); render(); window.scrollTo(0, 0);
+});
+async function leaveEditor() {
+  if (!V.edit || !editorDirty()) return true;
+  return confirmDialog({ title: 'Discard unsaved changes?', body: 'Your edits to this product have not been saved.', confirmText: 'Discard changes', danger: true });
+}
+
+/* ---------- toasts & modal ---------- */
+function toast(msg, kind) {
+  const el = document.createElement('div');
+  el.className = 'toast' + (kind ? ' ' + kind : '');
+  el.textContent = msg;
+  $('#toasts').appendChild(el);
+  setTimeout(() => { el.classList.add('out'); setTimeout(() => el.remove(), 300); }, kind === 'bad' ? 6500 : 3200);
+}
+
+let activeModal = null;
+function closeModal(reason) {
+  if (!activeModal) return;
+  const m = activeModal; activeModal = null;
+  m.back.remove();
+  document.removeEventListener('keydown', m.keyHandler, true);
+  if (m.prev && m.prev.focus) { try { m.prev.focus(); } catch (e) { /* ignore */ } }
+  if (m.opt.onClose) m.opt.onClose(reason || 'dismiss');
+}
+function openModal(opt) {
+  closeModal('replaced');
+  const back = document.createElement('div');
+  back.className = 'modal-back' + (opt.full ? ' full' : '');
+  const actions = (opt.actions || []).map((a) => '<button type="button" class="btn ' + (a.kind || 'ghost') + '" data-modal-action="' + esc(a.id) + '">' + esc(a.label) + '</button>').join('');
+  back.innerHTML = '<div class="modal' + (opt.wide ? ' wide' : '') + (opt.full ? ' full' : '') + '" role="dialog" aria-modal="true" aria-labelledby="m-title" tabindex="-1">' +
+    '<header class="modal-head"><h2 id="m-title">' + esc(opt.title) + '</h2><button type="button" class="icon-btn" data-modal-close aria-label="Close dialog">\u00D7</button></header>' +
+    '<div class="modal-body">' + opt.body + '</div>' + (actions ? '<footer class="modal-foot">' + actions + '</footer>' : '') + '</div>';
+  document.body.appendChild(back);
+  const modal = back.firstChild;
+  const keyHandler = (e) => {
+    if (e.key === 'Escape') { e.stopPropagation(); closeModal('escape'); return; }
+    if (opt.onKey && opt.onKey(e)) return;
+    if (e.key === 'Tab') {
+      const f = $$('button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])', modal).filter((x) => !x.disabled && x.offsetParent !== null);
+      if (!f.length) return;
+      const first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  };
+  document.addEventListener('keydown', keyHandler, true);
+  const api = { el: back, modal, close: (r) => closeModal(r || 'action'), body: $('.modal-body', back) };
+  activeModal = { back, opt, keyHandler, prev: document.activeElement, api };
+  back.addEventListener('mousedown', (e) => { if (e.target === back && !opt.full) closeModal('backdrop'); });
+  back.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-modal-action]');
+    if (b) { if (opt.onAction) opt.onAction(b.dataset.modalAction, api, b); else closeModal('action'); }
+    else if (e.target.closest('[data-modal-close]')) closeModal('close');
+  });
+  const firstField = $('[data-autofocus]', modal) || $('input,select,textarea', modal) || $('.btn.primary,.btn.danger', modal) || modal;
+  setTimeout(() => firstField.focus && firstField.focus(), 20);
+  return api;
+}
+function confirmDialog(o) {
+  return new Promise((resolve) => {
+    let done = false;
+    const fin = (v) => { if (!done) { done = true; resolve(v); } };
+    openModal({
+      title: o.title, body: '<p class="modal-text">' + (o.html ? o.body : esc(o.body)) + '</p>',
+      actions: [{ id: 'no', label: o.cancelText || 'Cancel', kind: 'ghost' }, { id: 'yes', label: o.confirmText || 'Confirm', kind: o.danger ? 'danger' : 'primary' }],
+      onAction: (id, api) => { fin(id === 'yes'); api.close(); }, onClose: () => fin(false)
+    });
+  });
+}
+
+/* ---------- shared fragments ---------- */
+const PLACEHOLDER = '<div class="img-ph" role="img" aria-label="No image"><svg viewBox="0 0 48 48" width="40" height="40" aria-hidden="true"><path d="M24 40 8 18l6-8h20l6 8z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 18h32M18 10l6 30 6-30" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></div>';
+function imgTag(id, alt, cls, size) {
+  const u = id ? imgSrc(id, size) : null;
+  return u ? '<img src="' + u + '" alt="' + esc(alt || '') + '" decoding="async" draggable="false"' + (isRemote() && !Pending.has(id) ? ' referrerpolicy="no-referrer" loading="lazy"' : '') + (cls ? ' class="' + cls + '"' : '') + '>' : PLACEHOLDER;
+}
+function priceHTML(p, big) {
+  const r = priceInfo(p);
+  if (!r.ok) return '<span class="price-missing">' + esc(r.issue) + '</span>';
+  return '<span class="price' + (big ? ' big' : '') + '"><span class="p1">' + esc(r.text) + '</span></span>';
+}
+function weightHTML(p, big) {
+  const w = weightLines(p); if (!w) return '';
+  return '<div class="weight' + (big ? ' big' : '') + '"><span class="w-label">Weight</span><span class="w-main">' + esc(w.main) + '</span>' + (w.sub ? '<span class="w-sub">' + esc(w.sub) + '</span>' : '') + '</div>';
+}
+const typeLabel = (p) => TYPES[p.type] + (hasGold(p.type) && p.purity ? ' \u00B7 ' + p.purity : '');
+
+/* ---------- copy / share / save ---------- */
+/** Plain-language reason for a failed clipboard or share call. */
+function reasonOf(e) {
+  if (!window.isSecureContext) return 'this page is not in a secure (https) context';
+  if (e && e.name === 'NotAllowedError') return 'the browser did not allow it (it may need a tap, or permission)';
+  if (e && (e.name === 'NotSupportedError' || e.message === 'unsupported')) return 'this browser cannot copy images';
+  return e && e.message ? e.message : 'the browser refused';
+}
+async function copyText(text, okMsg) {
+  try { await navigator.clipboard.writeText(text); toast(okMsg || 'Copied'); return true; } catch (e) { /* fall through */ }
+  try {
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0';
+    document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, text.length);
+    const ok = document.execCommand('copy'); ta.remove();
+    if (ok) { toast(okMsg || 'Copied'); return true; }
+  } catch (e) { /* fall through */ }
+  toast('Automatic copy was blocked. The text is selected so you can copy it yourself.', 'bad');
+  openModal({
+    title: 'Copy manually', body: '<p class="modal-text">Press and hold the text, then choose Copy. On a computer press Ctrl+C or \u2318C.</p><textarea class="copybox" id="copybox" rows="9" readonly>' + esc(text) + '</textarea>',
+    actions: [{ id: 'ok', label: 'Done', kind: 'primary' }]
+  });
+  setTimeout(() => { const t = $('#copybox'); if (t) { t.focus(); t.select(); } }, 40);
+  return false;
+}
+function productLink(p) { try { return /^https?:$/.test(location.protocol) ? location.href.split('#')[0] + '#shop~' + p.id : ''; } catch (e) { return ''; } }
+function productText(p) {
+  const pr = priceInfo(p), w = weightLines(p);
+  const cat = catName(p.categoryId) + (p.subId ? ' / ' + subName(p.categoryId, p.subId) : '');
+  const desc = (p.fullDesc || p.shortDesc || '').trim();
+  const lines = [p.name, 'Code: ' + p.sku];
+  if (desc) lines.push('', desc);
+  lines.push('', 'Price: ' + (pr.ok ? pr.text : 'on request'));
+  if (w) { lines.push('Weight: ' + w.main); if (w.sub) lines.push(w.sub); }
+  if (hasGold(p.type) && p.purity) lines.push('Gold: ' + p.purity);
+  if (hasDiamond(p.type)) lines.push('Diamond: ' + fmtNum(PX(p.diamondCarat) || 0) + ' ct' + (p.diamondDetails && p.diamondDetails.trim() ? ', ' + p.diamondDetails.trim() : ''));
+  lines.push('Category: ' + cat);
+  const link = productLink(p); if (link) lines.push('Link: ' + link);
+  return lines.join('\n');
+}
+async function shareProduct(p) {
+  const pr = priceInfo(p), link = productLink(p);
+  const data = { title: p.name, text: p.name + ' (' + p.sku + ')' + (pr.ok ? ' \u2013 ' + pr.text : '') };
+  if (link) data.url = link;
+  if (navigator.share) {
+    try { await navigator.share(data); toast('Shared.'); return; } catch (e) { if (e && e.name === 'AbortError') { toast('Sharing cancelled.'); return; } }
+  }
+  const ok = await copyText(productText(p), 'Sharing is not available here, so the product details were copied instead.');
+  if (!ok) return;
+}
+
+/* images: copy, share, save, open */
+const imgName = (id, i, type) => {
+  const ext = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp', 'image/gif': 'gif', 'image/svg+xml': 'svg' }[type || 'image/png'] || 'img';
+  const sku = (V.pid && byId(V.pid) && byId(V.pid).sku) || (V.edit && V.edit.draft.sku) || 'photo';
+  return String(sku).replace(/[^\w.-]+/g, '-') + '-' + ((i || 0) + 1) + '.' + ext;
+};
+async function toPng(blob) {
+  if (blob.type === 'image/png') return blob;
+  const url = URL.createObjectURL(blob);
+  try {
+    const img = new Image(); img.src = url; await img.decode();
+    const c = document.createElement('canvas');
+    c.width = img.naturalWidth || 800; c.height = img.naturalHeight || 1000;
+    c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+    return await new Promise((res, rej) => c.toBlob((b) => (b ? res(b) : rej(new Error('Could not convert the image to PNG'))), 'image/png'));
+  } finally { URL.revokeObjectURL(url); }
+}
+const canCopyImages = () => !!(window.isSecureContext && navigator.clipboard && navigator.clipboard.write && window.ClipboardItem);
+/** The real photo as PNG, loaded first if it only exists on the server. */
+async function photoPng(id) { const b = await getBlob(id); if (!b) throw new Error('The photo could not be loaded'); return toPng(b); }
+/** Shareable files use their own format when that is widely accepted, otherwise PNG. */
+async function shareFile(id, i) {
+  let blob = await getBlob(id);
+  if (!blob) throw new Error('The photo could not be loaded');
+  if (!/^image\/(png|jpeg|webp|gif)$/.test(blob.type)) blob = await toPng(blob);
+  return new File([blob], imgName(id, i, blob.type), { type: blob.type });
+}
+async function canShareFiles(ids) {
+  try { if (!navigator.share || !navigator.canShare) return false; return navigator.canShare({ files: await Promise.all(ids.map(shareFile)) }); } catch (e) { return false; }
+}
+async function copyImageById(id) {
+  if (!id) { toast('There is no image to copy.', 'bad'); return; }
+  if (!canCopyImages()) { toast('Copying images is not supported here (' + reasonOf({ message: 'unsupported' }) + '). Other options are shown.', 'bad'); openImageOptions([id]); return; }
+  try {
+    await navigator.clipboard.write([new ClipboardItem({ 'image/png': photoPng(id) })]);
+    toast('Image copied to the clipboard.');
+  } catch (e) { toast('The image was not copied: ' + reasonOf(e) + '. Other options are shown.', 'bad'); openImageOptions([id]); }
+}
+async function copyPhotos(ids) {
+  if (ids.length < 2) { copyImageById(ids[0]); return; }
+  if (canCopyImages()) {
+    try {
+      await navigator.clipboard.write(ids.map((id) => new ClipboardItem({ 'image/png': photoPng(id) })));
+      toast(ids.length + ' photos copied to the clipboard.'); return;
+    } catch (e) { /* most browsers accept only one image at a time */ }
+  }
+  toast('This browser cannot copy several photos at once, so none were copied. Share them together, or copy or save each one.', 'bad');
+  openImageOptions(ids);
+}
+async function shareImages(ids) {
+  try {
+    const files = await Promise.all(ids.map(shareFile));
+    if (!(navigator.share && navigator.canShare && navigator.canShare({ files }))) throw Object.assign(new Error('unsupported'), { name: 'NotSupportedError' });
+    await navigator.share({ files, title: (V.pid && byId(V.pid) ? byId(V.pid).name : 'Photos') });
+    toast(ids.length > 1 ? 'Photos shared.' : 'Image shared.');
+  } catch (e) {
+    if (e && e.name === 'AbortError') { toast('Sharing cancelled.'); return; }
+    toast('Sharing image files is not available here. Other options are shown.', 'bad'); openImageOptions(ids);
+  }
+}
+async function saveImage(id, i) {
+  let blob;
+  try { blob = await getBlob(id); } catch (e) { blob = null; }
+  if (!blob) { toast('The photo could not be loaded, so it was not saved.', 'bad'); return; }
+  const u = URL.createObjectURL(blob);
+  const a = document.createElement('a'); a.href = u; a.download = imgName(id, i, blob.type); a.rel = 'noopener';
+  document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(u), 30000);
+  toast('Save requested. If nothing downloaded, use Open image, then press and hold the picture and choose Save.');
+}
+/** Honest fallback: every way that might still work, per image. */
+async function openImageOptions(ids) {
+  const share = await canShareFiles(ids.slice(0, 1)), clip = canCopyImages();
+  const rows = ids.map((id, i) => '<li class="opt-row"><div class="opt-thumb">' + imgTag(id, '') + '</div><div class="opt-btns"><span class="opt-name">Photo ' + (i + 1) + '</span>' +
+    (clip ? '<button type="button" class="btn sm" data-act="img-copy" data-id="' + esc(id) + '">Copy</button>' : '') +
+    '<a class="btn sm" href="' + esc(imgSrc(id)) + '" target="_blank" rel="noopener">Open</a>' +
+    '<button type="button" class="btn sm" data-act="img-save" data-id="' + esc(id) + '" data-i="' + i + '">Save</button>' +
+    (share ? '<button type="button" class="btn sm" data-act="img-share" data-id="' + esc(id) + '">Share</button>' : '') + '</div></li>').join('');
+  openModal({
+    title: ids.length > 1 ? 'Copy or save photos' : 'Copy or save image',
+    body: '<p class="modal-text">' + (clip ? 'Try the buttons below.' : 'This browser cannot copy images to the clipboard.') + ' Open an image, then press and hold it (right-click on a computer) to copy or save it.</p><ul class="opt-list">' + rows + '</ul>',
+    actions: [{ id: 'ok', label: 'Close', kind: 'primary' }]
+  });
+}
+handlers['img-copy'] = (el) => copyImageById(el.dataset.id);
+handlers['img-share'] = (el) => shareImages([el.dataset.id]);
+handlers['img-save'] = (el) => saveImage(el.dataset.id, Number(el.dataset.i || 0));
+handlers['img-options'] = (el) => openImageOptions([el.dataset.id]);
+
+/* ---------- swipe (touch) ---------- */
+let swipe = null;
+document.addEventListener('touchstart', (e) => {
+  const el = e.target.closest && e.target.closest('[data-swipe]');
+  if (!el || e.touches.length !== 1) { swipe = null; return; }
+  swipe = { kind: el.dataset.swipe, x: e.touches[0].clientX, y: e.touches[0].clientY };
+}, { passive: true });
+document.addEventListener('touchend', (e) => {
+  if (!swipe) return;
+  const t = e.changedTouches[0], dx = t.clientX - swipe.x, dy = t.clientY - swipe.y, kind = swipe.kind; swipe = null;
+  if (Math.abs(dx) < 40 || Math.abs(dx) < Math.abs(dy) * 1.3) return;
+  stepGallery(kind, dx < 0 ? 1 : -1);
+}, { passive: true });
+function stepGallery(kind, dir) {
+  if (kind === 'lightbox') { if (LB) { LB.i = (LB.i + dir + LB.ids.length) % LB.ids.length; drawLightbox(); } return; }
+  const p = byId(V.pid); if (!p) return;
+  const n = galleryIds(p).length; if (n < 2) return;
+  V.gi = (V.gi + dir + n) % n; $('#gallery').innerHTML = galleryHTML(p);
+}
+
+/* ---------- full-screen gallery ---------- */
+let LB = null;
+function lightboxBody() {
+  const id = LB.ids[LB.i], clip = true;
+  return '<div class="lb"><button class="lb-nav" data-act="lb-step" data-dir="-1" aria-label="Previous photo"' + (LB.ids.length < 2 ? ' hidden' : '') + '>\u2039</button><div class="lb-img" data-swipe="lightbox">' + imgTag(id, 'Photo ' + (LB.i + 1) + ' of ' + LB.ids.length) + '</div><button class="lb-nav" data-act="lb-step" data-dir="1" aria-label="Next photo"' + (LB.ids.length < 2 ? ' hidden' : '') + '>\u203A</button></div>' +
+    '<p class="lb-count">' + (LB.i + 1) + ' / ' + LB.ids.length + '</p>' +
+    '<div class="lb-actions"><button class="btn sm" data-act="img-copy" data-id="' + esc(id) + '">Copy image</button><button class="btn sm" data-act="img-share" data-id="' + esc(id) + '">Share image</button><button class="btn sm" data-act="img-save" data-id="' + esc(id) + '" data-i="' + LB.i + '">Save image</button><a class="btn sm" href="' + esc(imgSrc(id) || '#') + '" target="_blank" rel="noopener">Open image</a></div>';
+}
+function drawLightbox() { if (activeModal && LB) { activeModal.api.body.innerHTML = lightboxBody(); } }
+function openLightbox(ids, idx) {
+  if (!ids.length) return;
+  prefetchBlobs(ids);
+  LB = { ids: ids.slice(), i: idx || 0 };
+  openModal({
+    title: 'Photos', body: lightboxBody(), full: true,
+    onKey: (e) => { if (e.key === 'ArrowRight') { stepGallery('lightbox', 1); return true; } if (e.key === 'ArrowLeft') { stepGallery('lightbox', -1); return true; } return false; },
+    onClose: () => { LB = null; }
+  });
+}
+handlers['lb-step'] = (el) => stepGallery('lightbox', Number(el.dataset.dir));
+
+/* =====================================================================
+   PUBLIC SHOWROOM
+   ===================================================================== */
+const CUR_ORDER = ['USD', 'KHR', 'THB'];
+/** Prices in different currencies are never converted, so price sorting groups by currency first. */
+const priceKey = (p) => { const r = priceInfo(p); return r.ok ? CUR_ORDER.indexOf(r.currency) * 1e15 + r.value : Infinity; };
+function shopFiltered() {
+  const f = V.shop, q = f.q.trim().toLowerCase();
+  const list = S.products.filter(isPublic).filter((p) => {
+    if (f.cat !== 'all' && p.categoryId !== f.cat) return false;
+    if (f.sub !== 'all' && p.subId !== f.sub) return false;
+    if (f.type !== 'all' && p.type !== f.type) return false;
+    if (q && ![p.name, p.sku, p.id, p.shortDesc, catName(p.categoryId)].some((x) => String(x || '').toLowerCase().indexOf(q) >= 0)) return false;
+    return true;
+  });
+  if (f.sort === 'price-asc') list.sort((a, b) => priceKey(a) - priceKey(b));
+  else if (f.sort === 'price-desc') list.sort((a, b) => priceKey(b) - priceKey(a));
+  else if (f.sort === 'name') list.sort((a, b) => a.name.localeCompare(b.name));
+  else list.sort((a, b) => (a.updatedAt < b.updatedAt ? 1 : -1));
+  return list;
+}
+function cardHTML(p, isStatic) {
+  const inner = '<div class="card-img">' + imgTag(coverId(p), p.name, '', 700) + '</div><div class="card-body"><p class="card-type">' + esc(typeLabel(p)) + '</p><h3>' + esc(p.name || 'Untitled') + '</h3><p class="sku">' + esc(p.sku) + '</p>' + weightHTML(p) + priceHTML(p) + '</div>';
+  return isStatic ? '<div class="card static">' + inner + '</div>' : '<a class="card" href="#shop~' + esc(p.id) + '" data-act="open-product" data-id="' + esc(p.id) + '">' + inner + '</a>';
+}
+function renderShop() {
+  const f = V.shop;
+  const catChips = '<button class="chip" data-act="shop-cat" data-id="all" aria-pressed="true">All pieces</button>' +
+    visibleCats().map((c) => '<button class="chip" data-act="shop-cat" data-id="' + esc(c.id) + '" aria-pressed="false">' + esc(c.name) + '</button>').join('');
+  app().innerHTML = '<section class="shop-hero"><div><p class="eyebrow">Showroom' + (isRemote() ? '' : ' \u00B7 demo catalog') + '</p><h1>Gold &amp; diamond jewelry</h1><p class="lede">Gold weights are shown in traditional Cambodian units. Prices are as listed by the shop.' + (isRemote() ? '' : ' Sample pieces only.') + '</p></div></section>' +
+    '<section class="shop-controls" aria-label="Search and filters"><div class="field grow"><label for="shop-q">Search</label><input id="shop-q" type="search" placeholder="Name or code" value="' + esc(f.q) + '" autocomplete="off"></div>' +
+    '<div class="field"><label for="shop-type">Type</label><select id="shop-type"><option value="all">All types</option>' + Object.keys(TYPES).map((k) => '<option value="' + k + '"' + (f.type === k ? ' selected' : '') + '>' + TYPES[k] + '</option>').join('') + '</select></div>' +
+    '<div class="field"><label for="shop-sort">Sort by</label><select id="shop-sort"><option value="recent">Newest</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="name">Name A\u2013Z</option></select></div>' +
+    '<button class="btn ghost" data-act="shop-clear">Clear filters</button></section>' +
+    '<nav class="chips" id="shop-cats" aria-label="Categories">' + catChips + '</nav><nav class="chips sub" id="shop-subs" aria-label="Subcategories"></nav>' +
+    '<p class="result-count" id="shop-count" aria-live="polite"></p><div class="grid" id="shop-grid"></div>';
+  $('#shop-sort').value = f.sort;
+  updateShopResults();
+}
+function updateShopResults() {
+  const f = V.shop;
+  if (f.cat !== 'all' && !visibleCats().some((c) => c.id === f.cat)) { f.cat = 'all'; f.sub = 'all'; }
+  $$('#shop-cats .chip').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.id === f.cat)));
+  const c = f.cat !== 'all' ? catById(f.cat) : null;
+  $('#shop-subs').innerHTML = c && c.subs.length ? '<button class="chip" data-act="shop-sub" data-id="all" aria-pressed="' + (f.sub === 'all') + '">All ' + esc(c.name) + '</button>' + c.subs.map((s) => '<button class="chip" data-act="shop-sub" data-id="' + esc(s.id) + '" aria-pressed="' + (f.sub === s.id) + '">' + esc(s.name) + '</button>').join('') : '';
+  const list = shopFiltered();
+  $('#shop-count').textContent = list.length + (list.length === 1 ? ' piece' : ' pieces');
+  $('#shop-grid').innerHTML = list.length ? list.map((p) => cardHTML(p)).join('') : '<div class="empty"><h3>Nothing matches these filters</h3><p>Try a different search, or show everything again.</p><button class="btn primary" data-act="shop-clear">Clear filters</button></div>';
+}
+handlers['shop-cat'] = (el) => { V.shop.cat = el.dataset.id; V.shop.sub = 'all'; updateShopResults(); };
+handlers['shop-sub'] = (el) => { V.shop.sub = el.dataset.id; updateShopResults(); };
+handlers['shop-clear'] = () => { V.shop = { q: '', cat: 'all', sub: 'all', type: 'all', sort: 'recent' }; renderShop(); };
+handlers['shop-home'] = () => go({ mode: 'shop', pid: null, preview: false });
+handlers['open-product'] = (el) => { V.gi = 0; go({ mode: 'shop', pid: el.dataset.id, preview: false }); };
+
+function galleryHTML(p) {
+  const ids = galleryIds(p);
+  if (!ids.length) return '<div class="g-main">' + PLACEHOLDER + '</div>';
+  const i = Math.min(V.gi, ids.length - 1), cur = ids[i];
+  return '<button class="g-main" data-swipe="gallery" data-act="lightbox" data-i="' + i + '" aria-label="Open photo ' + (i + 1) + ' of ' + ids.length + ' full screen">' + imgTag(cur, p.name + ' \u2013 photo ' + (i + 1)) + (ids.length > 1 ? '<span class="g-count">' + (i + 1) + ' / ' + ids.length + '</span>' : '') + '</button>' +
+    (ids.length > 1 ? '<div class="g-thumbs" role="group" aria-label="Product photos">' + ids.map((id, n) => '<button class="g-thumb" data-act="thumb" data-i="' + n + '" aria-label="Show photo ' + (n + 1) + '" aria-pressed="' + (n === i) + '">' + imgTag(id, '') + '</button>').join('') + '</div>' : '') +
+    '<div class="img-actions" role="group" aria-label="This photo"><button class="btn sm" data-act="img-copy" data-id="' + esc(cur) + '">Copy image</button><button class="btn sm" data-act="img-share" data-id="' + esc(cur) + '">Share image</button><button class="btn sm" data-act="img-save" data-id="' + esc(cur) + '" data-i="' + i + '">Save image</button><a class="btn sm" href="' + esc(imgSrc(cur) || '#') + '" target="_blank" rel="noopener">Open image</a></div>' +
+    (ids.length > 1 ? '<div class="img-actions" role="group" aria-label="All photos"><button class="btn sm primary" data-act="copy-photos">Copy photos</button><button class="btn sm primary" data-act="share-photos">Share photos</button></div>' : '');
+}
+function renderDetail() {
+  const p = byId(V.pid);
+  if (!p || (!V.preview && !isPublic(p))) {
+    app().innerHTML = '<div class="empty"><h3>This piece is not available</h3><p>It may have been hidden or removed from the showroom.</p><button class="btn primary" data-act="shop-home">Back to the showroom</button></div>';
+    return;
+  }
+  const why = whyNotPublic(p);
+  const bar = V.preview ? '<div class="preview-bar" role="status"><span><b>Customer preview.</b> ' + (why.length ? 'Not visible in the showroom: ' + esc(why.join(', ')) + '.' : 'This is exactly what customers see.') + '</span><button class="btn sm" data-act="exit-preview">Back to admin</button></div>' : '';
+  const spec = (k, v) => v ? '<div><dt>' + k + '</dt><dd>' + v + '</dd></div>' : '';
+  const related = S.products.filter((x) => x.id !== p.id && isPublic(x)).sort((a, b) => (b.categoryId === p.categoryId) - (a.categoryId === p.categoryId) || (b.type === p.type) - (a.type === p.type)).slice(0, 4);
+  app().innerHTML = bar + '<nav class="crumbs" aria-label="Breadcrumb"><a href="#shop" data-act="shop-home">Showroom</a><span aria-hidden="true">/</span><span>' + esc(catName(p.categoryId)) + '</span>' + (p.subId ? '<span aria-hidden="true">/</span><span>' + esc(subName(p.categoryId, p.subId)) + '</span>' : '') + '</nav>' +
+    '<article class="detail"><div class="gallery" id="gallery">' + galleryHTML(p) + '</div><div class="info">' +
+    '<p class="card-type">' + esc(typeLabel(p)) + '</p><h1>' + esc(p.name) + '</h1><p class="sku">Code ' + esc(p.sku) + '</p>' +
+    '<div class="price-block">' + priceHTML(p, true) + '</div>' + weightHTML(p, true) +
+    (p.shortDesc ? '<p class="lead">' + esc(p.shortDesc) + '</p>' : '') + (p.fullDesc ? '<p class="body-text">' + esc(p.fullDesc) + '</p>' : '') +
+    '<dl class="specs">' + spec('Type', esc(TYPES[p.type])) + spec('Category', esc(catName(p.categoryId) + (p.subId ? ' \u203A ' + subName(p.categoryId, p.subId) : ''))) +
+    (hasGold(p.type) ? spec('Gold', esc(p.purity)) : '') + (hasDiamond(p.type) ? spec('Diamond', esc(fmtNum(PX(p.diamondCarat) || 0) + ' ct' + (p.diamondDetails && p.diamondDetails.trim() ? ' \u00B7 ' + p.diamondDetails.trim() : ''))) : '') + spec('Code', '<span class="mono">' + esc(p.sku) + '</span>') + '</dl>' +
+    '<div class="actions"><button class="btn primary" data-act="copy-details" data-id="' + esc(p.id) + '">Copy details</button><button class="btn" data-act="copy-price" data-id="' + esc(p.id) + '"' + (priceInfo(p).ok ? '' : ' disabled') + '>Copy price</button><button class="btn" data-act="share" data-id="' + esc(p.id) + '">Share product</button></div></div></article>' +
+    (related.length ? '<section class="related"><h2>You may also like</h2><div class="grid">' + related.map((x) => cardHTML(x)).join('') + '</div></section>' : '');
+  afterDetail();
+}
+function afterDetail() { const p = byId(V.pid); if (p) prefetchBlobs(galleryIds(p)); }
+handlers['thumb'] = (el) => { V.gi = Number(el.dataset.i); $('#gallery').innerHTML = galleryHTML(byId(V.pid)); };
+handlers['lightbox'] = (el) => openLightbox(galleryIds(byId(V.pid)), Number(el.dataset.i));
+handlers['copy-details'] = (el) => copyText(productText(byId(el.dataset.id)), 'Product details copied.');
+handlers['copy-price'] = (el) => { const r = priceInfo(byId(el.dataset.id)); if (r.ok) copyText(r.text, 'Price copied: ' + r.text); };
+handlers['share'] = (el) => shareProduct(byId(el.dataset.id));
+handlers['copy-photos'] = () => copyPhotos(galleryIds(byId(V.pid)));
+handlers['share-photos'] = () => shareImages(galleryIds(byId(V.pid)));
+handlers['exit-preview'] = () => go({ mode: 'admin', pid: null, preview: false });
+/* =====================================================================
+   REMOTE: Google Apps Script server (Sheets + Drive), PIN sign-in, change sync.
+   Active only when an API URL is configured. With no URL the app stays in demo mode.
+   Everything the rest of the app does to `S` and calls `persist()` for is diffed here
+   and sent to the server, so the UI code does not need to know about the network.
+   ===================================================================== */
+const API_URL_KEY = 'aurelle-api-url', TOKEN_KEY = 'aurelle-token', PUBLIC_CACHE_KEY = 'aurelle-public-cache';
+const lsGet = (k) => { try { return localStorage.getItem(k); } catch (e) { return null; } };
+const lsSet = (k, v) => { try { if (v === null) localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) { /* ignore */ } };
+const CONFIG = Object.assign({ apiUrl: '', imageUrl: null }, window.CATALOG_CONFIG || {});
+if (!CONFIG.apiUrl) CONFIG.apiUrl = lsGet(API_URL_KEY) || '';
+const isRemote = () => !!CONFIG.apiUrl;
+
+/* ---------- API ---------- */
+class ApiError extends Error { constructor(code, message, extra) { super(message); this.code = code; this.extra = extra || {}; } }
+const Api = {
+  async call(action, body) {
+    const payload = Object.assign({ action, token: Auth.token }, body || {});
+    let res;
+    try {
+      res = await fetch(CONFIG.apiUrl, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(payload), redirect: 'follow' });
+    } catch (e) { throw new ApiError('network', 'Could not reach the server. Check the internet connection.'); }
+    let data;
+    try { data = await res.json(); } catch (e) { throw new ApiError('network', res.status >= 500 ? 'The server is not available right now.' : 'The server sent an unexpected reply. Check the server URL and that the web app is deployed for "Anyone".'); }
+    if (!data.ok) {
+      if (data.error === 'auth') Auth.expire();
+      throw new ApiError(data.error || 'server', data.message || 'The server refused the request.', data);
+    }
+    return data;
+  },
+  async publicCatalog() {
+    let res;
+    try { res = await fetch(CONFIG.apiUrl + (CONFIG.apiUrl.indexOf('?') >= 0 ? '&' : '?') + 'action=catalog&_=' + Date.now(), { redirect: 'follow' }); } catch (e) { throw new ApiError('network', 'Could not reach the server.'); }
+    let data; try { data = await res.json(); } catch (e) { throw new ApiError('network', 'The server sent an unexpected reply.'); }
+    if (!data.ok) throw new ApiError(data.error || 'server', data.message || 'The server refused the request.');
+    return data;
+  }
+};
+
+/* ---------- sign-in state ---------- */
+const Auth = {
+  token: null, role: null, name: null,
+  load() { const raw = lsGet(TOKEN_KEY); if (raw) { try { const o = JSON.parse(raw); this.token = o.token; this.role = o.role; this.name = o.name; } catch (e) { /* ignore */ } } },
+  save() { lsSet(TOKEN_KEY, JSON.stringify({ token: this.token, role: this.role, name: this.name })); },
+  clear() { this.token = this.role = this.name = null; lsSet(TOKEN_KEY, null); },
+  expire() { if (this.token) { this.clear(); setTimeout(() => { if (V.mode === 'admin') { toast('Your session ended. Please sign in again.', 'bad'); render(); } }, 0); } },
+  get signedIn() { return !isRemote() || !!this.token; },
+  get isOwner() { return !isRemote() || this.role === 'owner'; }
+};
+
+/* ---------- photo bytes (copy, share, save need the real file, not just a picture on screen) ---------- */
+const Blobs = new Map(), BlobLoads = new Map();
+const imageUrl = (id, size) => (CONFIG.imageUrl ? CONFIG.imageUrl(id, size || 1600) : 'https://drive.google.com/thumbnail?id=' + encodeURIComponent(id) + '&sz=w' + (size || 1600));
+function b64ToBlob(b64, mime) { const bin = atob(b64), a = new Uint8Array(bin.length); for (let i = 0; i < bin.length; i++) a[i] = bin.charCodeAt(i); return new Blob([a], { type: mime }); }
+function blobToB64(blob) { return new Promise((res, rej) => { const r = new FileReader(); r.onload = () => res(String(r.result).split(',')[1]); r.onerror = () => rej(new Error('Could not read the photo.')); r.readAsDataURL(blob); }); }
+async function getBlob(id) {
+  if (!id) return null;
+  if (Pending.has(id)) return Pending.map.get(id).blob;
+  const c = Images.cache.get(id); if (c) return c.blob;
+  if (Blobs.has(id)) return Blobs.get(id);
+  if (!isRemote()) return null;
+  if (!BlobLoads.has(id)) {
+    BlobLoads.set(id, Api.call('getImage', { id }).then((r) => { const b = b64ToBlob(r.data, r.mime); Blobs.set(id, b); return b; }).finally(() => BlobLoads.delete(id)));
+  }
+  return BlobLoads.get(id);
+}
+/** Warm the cache so Share still counts as a tap (browsers drop that after a slow download). */
+function prefetchBlobs(ids) { if (isRemote()) ids.forEach((id) => { getBlob(id).catch(() => { /* surfaced when the person taps copy */ }); }); }
+
+/** Re-encodes anything the server would refuse (HEIC, odd formats) as JPEG before upload. */
+async function uploadable(blob) {
+  if (['image/jpeg', 'image/png', 'image/webp', 'image/gif'].indexOf(blob.type) >= 0) return blob;
+  const url = URL.createObjectURL(blob);
+  try {
+    const img = new Image(); img.src = url; await img.decode();
+    const c = document.createElement('canvas'); c.width = img.naturalWidth; c.height = img.naturalHeight;
+    c.getContext('2d').drawImage(img, 0, 0);
+    return await new Promise((res, rej) => c.toBlob((b) => (b ? res(b) : rej(new Error('convert'))), 'image/jpeg', 0.9));
+  } catch (e) { throw new ApiError('invalid', 'This photo format cannot be used. Try a JPEG or PNG.'); } finally { URL.revokeObjectURL(url); }
+}
+async function uploadPending(id) {
+  const rec = Pending.map.get(id);
+  const blob = await uploadable(rec.blob);
+  const r = await Api.call('uploadImage', { mime: blob.type, name: rec.name, data: await blobToB64(blob) });
+  Blobs.set(r.id, blob);
+  return r.id;
+}
+
+/* ---------- change sync ---------- */
+const Sync = {
+  products: new Map(), baseTs: new Map(), cats: '', settings: '', busy: null, again: false, retryTimer: null, dirtyFail: null,
+  mark() {
+    this.products = new Map(S.products.map((p) => [p.id, JSON.stringify(p)]));
+    this.baseTs = new Map(S.products.map((p) => [p.id, p.updatedAt]));
+    this.cats = JSON.stringify(S.categories); this.settings = JSON.stringify(S.settings);
+  },
+  dirty() {
+    return JSON.stringify(S.categories) !== this.cats || JSON.stringify(S.settings) !== this.settings || S.products.length !== this.products.size ||
+      S.products.some((p) => this.products.get(p.id) !== JSON.stringify(p));
+  },
+  /** Sends every difference to the server. Resolves { ok } or { ok:false, code, message }. */
+  flush() {
+    if (this.busy) { this.again = true; return this.busy; }
+    this.busy = this._run().finally(() => { this.busy = null; if (this.again) { this.again = false; this.flush(); } });
+    return this.busy;
+  },
+  async _run() {
+    clearTimeout(this.retryTimer);
+    try {
+      if (JSON.stringify(S.settings) !== this.settings) {
+        try {
+          const r = await Api.call('saveSettings', { settings: { weightDisplay: S.settings.weightDisplay } });
+          S.settings = r.settings; this.settings = JSON.stringify(S.settings);
+        } catch (e) { if (e.code === 'invalid') { S.settings = JSON.parse(this.settings); return { ok: false, code: 'invalid', message: e.message }; } throw e; }
+      }
+      if (JSON.stringify(S.categories) !== this.cats) {
+        try {
+          const r = await Api.call('saveCategories', { categories: S.categories });
+          S.categories = r.categories; this.cats = JSON.stringify(S.categories);
+        } catch (e) { if (e.code === 'invalid') { S.categories = JSON.parse(this.cats); return { ok: false, code: 'invalid', message: e.message }; } throw e; }
+      }
+      for (const p of S.products.slice()) {
+        if (this.products.get(p.id) === JSON.stringify(p)) continue;
+        try {
+          const r = await Api.call('saveProduct', { product: p, baseUpdatedAt: this.baseTs.has(p.id) ? this.baseTs.get(p.id) : undefined });
+          const i = S.products.findIndex((x) => x.id === p.id); if (i >= 0) S.products[i] = r.product;
+          this.products.set(p.id, JSON.stringify(r.product)); this.baseTs.set(p.id, r.product.updatedAt);
+        } catch (e) {
+          if (e.code === 'conflict') {
+            const i = S.products.findIndex((x) => x.id === p.id), cur = e.extra.current;
+            if (cur) { if (i >= 0) S.products[i] = cur; this.products.set(p.id, JSON.stringify(cur)); this.baseTs.set(p.id, cur.updatedAt); } else { if (i >= 0) S.products.splice(i, 1); this.products.delete(p.id); this.baseTs.delete(p.id); }
+            toast(e.message + ' Their version is now shown; your change was not saved.', 'bad');
+            return { ok: false, code: 'conflict', message: e.message };
+          }
+          if (e.code === 'invalid') {
+            const i = S.products.findIndex((x) => x.id === p.id), snap = this.products.get(p.id);
+            if (snap) { if (i >= 0) S.products[i] = JSON.parse(snap); } else if (i >= 0) S.products.splice(i, 1);
+            return { ok: false, code: 'invalid', message: e.message };
+          }
+          throw e;
+        }
+      }
+      for (const id of Array.from(this.products.keys())) {
+        if (S.products.some((p) => p.id === id)) continue;
+        await Api.call('deleteProduct', { id });
+        this.products.delete(id); this.baseTs.delete(id);
+      }
+      this.dirtyFail = null; Sync.banner();
+      return { ok: true };
+    } catch (e) {
+      this.dirtyFail = e;
+      if (e.code === 'network') { this.retryTimer = setTimeout(() => this.flush(), 6000); }
+      Sync.banner();
+      return { ok: false, code: e.code, message: e.message };
+    }
+  },
+  banner() { updateStorageBanner(); }
+};
+
+/* ---------- loading ---------- */
+async function loadPublic() {
+  const d = await Api.publicCatalog();
+  S = { v: 2, settings: d.settings, categories: d.categories, products: d.products };
+  lsSet(PUBLIC_CACHE_KEY, JSON.stringify(S));
+  offlineCopy = false;
+}
+let offlineCopy = false;
+async function loadAdmin() {
+  const d = await Api.call('adminData');
+  S = { v: 2, settings: d.settings, categories: d.categories, products: d.products };
+  Auth.role = d.role; Auth.name = d.name; Auth.save(); Sync.mark();
+}
+async function remoteBoot() {
+  Auth.load();
+  try {
+    if (Auth.token) { try { await loadAdmin(); } catch (e) { if (e.code === 'auth') { await loadPublic(); } else throw e; } } else await loadPublic();
+  } catch (e) {
+    const cached = lsGet(PUBLIC_CACHE_KEY);
+    if (!cached) throw e;
+    S = JSON.parse(cached); offlineCopy = true;
+  }
+}
+const remoteStatus = () => (offlineCopy ? 'The server could not be reached, so this is the last copy saved on this device. Prices and photos may be out of date.' : '');
+
+/* ---------- sign-in screen ---------- */
+function renderLogin(host) {
+  host.innerHTML = '<div class="login"><form class="panel" data-submit="login" autocomplete="off"><h1>Staff sign-in</h1><p class="sub">Enter your PIN to manage products.</p>' +
+    '<div class="field"><label for="pin-input">PIN</label><input id="pin-input" type="password" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" maxlength="8" data-autofocus><p class="err" id="login-err" role="alert"></p></div>' +
+    '<div class="form-actions"><button class="btn primary" type="submit">Sign in</button></div></form></div>';
+  const i = $('#pin-input'); if (i) setTimeout(() => i.focus(), 30);
+}
+document.addEventListener('submit', (e) => { const f = e.target.closest && e.target.closest('[data-submit]'); if (f) { e.preventDefault(); const fn = handlers[f.dataset.submit]; if (fn) fn(f, e); } });
+handlers['login'] = async (form) => {
+  const pin = ($('#pin-input') || {}).value || '', err = $('#login-err'), btn = $('button[type="submit"]', form);
+  if (!/^\d{4,8}$/.test(pin)) { err.textContent = 'Enter your 4 to 8 digit PIN.'; return; }
+  btn.disabled = true; err.textContent = '';
+  try {
+    const r = await Api.call('login', { pin });
+    Auth.token = r.token; Auth.role = r.role; Auth.name = r.name; Auth.save();
+    await loadAdmin(); V.tab = 'products'; render(); toast('Signed in as ' + r.name + '.');
+  } catch (e) { err.textContent = e.message; btn.disabled = false; $('#pin-input').select(); }
+};
+handlers['logout'] = async () => {
+  if (!(await leaveEditor())) return;
+  if (Sync.dirty() && !(await confirmDialog({ title: 'Sign out with unsaved changes?', body: 'Some changes have not reached the server yet. Signing out now may lose them.', confirmText: 'Sign out anyway', danger: true }))) return;
+  try { await Api.call('logout'); } catch (e) { /* the session expires by itself */ }
+  Auth.clear(); try { await loadPublic(); } catch (e) { /* keep what we have */ }
+  go({ mode: 'shop', pid: null, preview: false });
+};
+handlers['refresh'] = async () => {
+  if (V.edit) { toast('Finish or cancel the edit first.', 'bad'); return; }
+  if (Sync.dirty()) { toast('Some changes are still being saved. Try again in a moment.', 'bad'); return; }
+  try { await loadAdmin(); render(); toast('Updated from the server.'); } catch (e) { toast(e.message, 'bad'); }
+};
+handlers['reload-page'] = () => location.reload();
+document.addEventListener('visibilitychange', async () => {
+  if (document.visibilityState !== 'visible' || !isRemote() || !Auth.token || V.mode !== 'admin' || V.edit || Sync.dirty() || Sync.busy) return;
+  try { await loadAdmin(); if (!V.edit && V.mode === 'admin') render(); } catch (e) { /* silent */ }
+});
+
+/* ---------- staff tab (owner) ---------- */
+let staffList = [];
+async function renderStaff(host) {
+  host.innerHTML = '<div class="page-head"><div><h1>Staff</h1><p class="sub">Each person signs in with their own PIN. Staff can add and edit products. Only owners manage categories, settings, staff and deletions.</p></div><button class="btn primary" data-act="staff-add">Add person</button></div><div id="staff-list" class="plist"><p class="sub">Loading…</p></div>';
+  try { staffList = (await Api.call('listStaff')).staff; } catch (e) { $('#staff-list').innerHTML = '<p class="err">' + esc(e.message) + '</p>'; return; }
+  drawStaff();
+}
+function drawStaff() {
+  const el = $('#staff-list'); if (!el) return;
+  el.innerHTML = staffList.map((s) => '<article class="prow"><div class="pmain"><h3>' + esc(s.name) + '</h3><p class="meta">' + (s.role === 'owner' ? 'Owner' : 'Staff') + (s.active ? '' : ' · Inactive') + '</p></div><div class="pactions"><button class="btn sm" data-act="staff-edit" data-id="' + esc(s.id) + '">Edit</button></div></article>').join('');
+}
+function staffModal(s) {
+  const isNew = !s;
+  openModal({
+    title: isNew ? 'Add person' : 'Edit ' + s.name,
+    body: '<div class="form-grid one"><div class="field"><label for="st-name">Name</label><input id="st-name" type="text" maxlength="60" value="' + esc(s ? s.name : '') + '"></div>' +
+      '<div class="field"><label for="st-role">Role</label><select id="st-role"><option value="staff"' + (s && s.role === 'staff' ? ' selected' : '') + '>Staff</option><option value="owner"' + (s && s.role === 'owner' ? ' selected' : '') + '>Owner</option></select></div>' +
+      '<div class="field"><label for="st-pin">' + (isNew ? 'PIN' : 'New PIN') + '</label><input id="st-pin" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="8" autocomplete="off"><p class="hint">4 to 8 digits, different from everyone else' + (isNew ? '.' : '. Leave blank to keep the current PIN.') + '</p></div>' +
+      (isNew ? '' : '<label class="radio"><input type="checkbox" id="st-active"' + (s.active ? ' checked' : '') + '> <span>Can sign in</span></label>') + '<p class="err" id="st-err" role="alert"></p></div>',
+    actions: [{ id: 'cancel', label: 'Cancel', kind: 'ghost' }, { id: 'save', label: 'Save', kind: 'primary' }],
+    onAction: async (id, api) => {
+      if (id === 'cancel') { api.close(); return; }
+      const err = $('#st-err', api.el), pin = $('#st-pin', api.el).value.trim();
+      try {
+        const r = await Api.call('saveStaff', { id: s && s.id, name: $('#st-name', api.el).value, role: $('#st-role', api.el).value, pin: pin || undefined, active: isNew ? true : $('#st-active', api.el).checked });
+        staffList = r.staff; api.close(); drawStaff(); toast(isNew ? 'Person added.' : 'Saved.');
+      } catch (e) { err.textContent = e.message; }
+    }
+  });
+}
+handlers['staff-add'] = () => staffModal(null);
+handlers['staff-edit'] = (el) => staffModal(staffList.find((x) => x.id === el.dataset.id));
+handlers['my-pin'] = () => {
+  openModal({
+    title: 'Change my PIN', body: '<div class="field"><label for="mp-pin">New PIN</label><input id="mp-pin" type="password" inputmode="numeric" pattern="[0-9]*" maxlength="8" autocomplete="off"><p class="hint">4 to 8 digits.</p><p class="err" id="mp-err" role="alert"></p></div>',
+    actions: [{ id: 'cancel', label: 'Cancel', kind: 'ghost' }, { id: 'save', label: 'Change PIN', kind: 'primary' }],
+    onAction: async (id, api) => {
+      if (id === 'cancel') { api.close(); return; }
+      try { await Api.call('changeMyPin', { pin: $('#mp-pin', api.el).value.trim() }); api.close(); toast('PIN changed. Use the new one next time.'); } catch (e) { $('#mp-err', api.el).textContent = e.message; }
+    }
+  });
+};
+
+/* ---------- server page (replaces "Demo data" when connected) ---------- */
+function renderServer(host) {
+  host.innerHTML = '<div class="page-head"><div><h1>Server</h1><p class="sub">Products, categories and settings are stored in your Google Sheet. Photos are stored in your Google Drive folder.</p></div></div>' +
+    '<section class="panel"><h2>Connection</h2><dl class="kv"><div><dt>Server URL</dt><dd class="mono" style="word-break:break-all">' + esc(CONFIG.apiUrl) + '</dd></div><div><dt>Signed in as</dt><dd>' + esc(Auth.name || '') + ' (' + esc(Auth.role || '') + ')</dd></div><div><dt>Products on the server</dt><dd>' + S.products.length + '</dd></div><div><dt>Save status</dt><dd id="save-status">' + (Sync.dirty() ? '<span class="flag">Changes waiting to save</span>' : 'Everything is saved') + '</dd></div></dl>' +
+    '<div class="form-actions"><button class="btn" data-act="refresh">Refresh from server</button></div></section>' +
+    (Auth.isOwner ? '<section class="panel"><h2>Photos</h2><p>Photos you remove from a product are moved to the Drive trash automatically. This also trashes any other file in the photo folder that no product uses.</p><div class="form-actions"><button class="btn" data-act="clean-images">Clean unused photos</button></div></section>' : '') +
+    '<section class="panel"><h2>Where things are</h2><ul class="plain"><li><b>Sheet tabs:</b> Products, Categories, Settings, Staff, Audit. Audit lists who changed what and when.</li><li><b>Backups:</b> use File &gt; Version history in the Google Sheet. Staff PINs are stored hashed.</li></ul></section>';
+}
+handlers['clean-images'] = async () => {
+  if (!(await confirmDialog({ title: 'Clean unused photos?', body: 'Photos in the Drive folder that no product or category uses will be moved to the Drive trash. You can restore them from there for 30 days.', confirmText: 'Clean up' }))) return;
+  try { const r = await Api.call('cleanImages'); toast(r.trashed + ' unused photo' + (r.trashed === 1 ? '' : 's') + ' moved to the Drive trash.'); } catch (e) { toast(e.message, 'bad'); }
+};
+handlers['connect-server'] = () => {
+  const url = ($('#srv-url') || {}).value.trim();
+  if (!/^https:\/\/script\.google\.com\/macros\/s\/[\w-]+\/exec$/.test(url)) { $('#srv-err').textContent = 'Paste the full Web app URL. It starts with https://script.google.com/macros/s/ and ends with /exec.'; return; }
+  lsSet(API_URL_KEY, url); location.reload();
+};
+handlers['disconnect-server'] = async () => {
+  if (!(await confirmDialog({ title: 'Go back to demo mode?', body: 'This device will stop using the server and show the local demo data instead. Nothing on the server is deleted.', confirmText: 'Use demo mode' }))) return;
+  lsSet(API_URL_KEY, null); Auth.clear(); location.reload();
+};
+/* =====================================================================
+   ADMIN: shell, product list, product editor
+   ===================================================================== */
+function adminTabs() {
+  const all = isRemote()
+    ? [['products', 'Products'], ['categories', 'Categories'], ['settings', 'Settings'], ['staff', 'Staff'], ['demo', 'Server']]
+    : [['products', 'Products'], ['categories', 'Categories'], ['settings', 'Settings'], ['demo', 'Demo data']];
+  return Auth.isOwner ? all : all.filter((t) => t[0] === 'products');
+}
+function renderAdmin() {
+  if (!Auth.signedIn) { app().innerHTML = '<div id="admin-body"></div>'; renderLogin($('#admin-body')); return; }
+  const tabs = adminTabs();
+  if (!tabs.some((t) => t[0] === V.tab)) V.tab = 'products';
+  const who = isRemote() ? '<span class="who">' + esc(Auth.name || '') + '</span><button class="btn sm ghost" data-act="my-pin">My PIN</button><button class="btn sm ghost" data-act="logout">Sign out</button>' : '';
+  app().innerHTML = '<div class="tabbar"><nav class="tabs" aria-label="Admin sections">' + tabs.map((t) => '<button class="tab" data-act="tab" data-tab="' + t[0] + '" aria-current="' + (V.tab === t[0] ? 'page' : 'false') + '">' + t[1] + '</button>').join('') + '</nav>' + (who ? '<div class="who-box">' + who + '</div>' : '') + '</div><div id="admin-body"></div>';
+  const host = $('#admin-body');
+  ({ products: renderProducts, categories: renderCategories, settings: renderSettings, staff: renderStaff, demo: isRemote() ? renderServer : renderDemo }[V.tab] || renderProducts)(host);
+}
+handlers['tab'] = async (el) => { if (!(await leaveEditor())) return; go({ mode: 'admin', tab: el.dataset.tab }); };
+
+/* ---------- product list ---------- */
+function adminFiltered() {
+  const f = V.adm, q = f.q.trim().toLowerCase();
+  const list = S.products.filter((p) => {
+    if (f.status === 'active' && p.status === 'archived') return false;
+    if (['published', 'hidden', 'archived'].indexOf(f.status) >= 0 && p.status !== f.status) return false;
+    if (f.cat !== 'all' && p.categoryId !== f.cat) return false;
+    if (f.type !== 'all' && p.type !== f.type) return false;
+    if (f.purity !== 'all' && p.purity !== f.purity) return false;
+    if (q && ![p.name, p.sku, p.id].some((x) => String(x).toLowerCase().indexOf(q) >= 0)) return false;
+    return true;
+  });
+    if (f.sort === 'name') list.sort((a, b) => a.name.localeCompare(b.name));
+  else if (f.sort === 'price-asc') list.sort((a, b) => priceKey(a) - priceKey(b));
+  else if (f.sort === 'price-desc') list.sort((a, b) => (priceKey(b) === Infinity ? -1 : priceKey(a) === Infinity ? 1 : priceKey(b) - priceKey(a)));
+  else list.sort((a, b) => (a.updatedAt < b.updatedAt ? 1 : -1));
+  return list;
+}
+function productRow(p) {
+  const r = priceInfo(p), notShown = p.status === 'published' && !isPublic(p) ? whyNotPublic(p) : [];
+  const sub = p.subId ? ' \u203A ' + subName(p.categoryId, p.subId) : '';
+  const actions = ['<button class="btn sm" data-act="edit" data-id="' + esc(p.id) + '">Edit</button>', '<button class="btn sm ghost" data-act="preview" data-id="' + esc(p.id) + '">Preview</button>', '<button class="btn sm ghost" data-act="duplicate" data-id="' + esc(p.id) + '">Duplicate</button>'];
+  if (p.status === 'archived') actions.push('<button class="btn sm ghost" data-act="restore" data-id="' + esc(p.id) + '">Restore</button>', Auth.isOwner ? '<button class="btn sm ghost danger-text" data-act="delete" data-id="' + esc(p.id) + '">Delete</button>' : '');
+  else actions.push('<button class="btn sm ghost" data-act="toggle-pub" data-id="' + esc(p.id) + '">' + (p.status === 'published' ? 'Hide' : 'Publish') + '</button>', '<button class="btn sm ghost" data-act="archive" data-id="' + esc(p.id) + '">Archive</button>');
+  return '<article class="prow' + (p.status === 'archived' ? ' is-archived' : '') + '"><div class="pthumb">' + imgTag(coverId(p), '') + '</div>' +
+    '<div class="pmain"><h3>' + esc(p.name) + '</h3><p class="meta"><span class="mono">' + esc(p.sku) + '</span><span class="mono dim">' + esc(p.id) + '</span></p><p class="meta">' + esc(typeLabel(p)) + ' \u00B7 ' + esc(catName(p.categoryId) + sub) + '</p></div>' +
+    '<div class="pprice">' + (r.ok ? priceHTML(p) : '<span class="flag" title="' + esc(r.issue) + '">No price</span><small class="issue">' + esc(r.issue) + '</small>') + '</div>' +
+    '<div class="pstatus"><span class="pill ' + p.status + '">' + STATUS_LABEL[p.status] + '</span>' + (notShown.length ? '<small class="issue">Not in showroom: ' + esc(notShown.join(', ')) + '</small>' : '') + '</div>' +
+    '<div class="pactions">' + actions.join('') + '</div></article>';
+}
+function renderProducts(host) {
+  if (V.edit) { renderEditor(host); return; }
+  const f = V.adm;
+  const act = S.products.filter((p) => p.status !== 'archived');
+  const stat = (n, l, cls) => '<div class="stat ' + (cls || '') + '"><b>' + n + '</b><span>' + l + '</span></div>';
+  const flagged = act.filter((p) => !priceInfo(p).ok).length;
+  host.innerHTML = '<div class="page-head"><div><h1>Products</h1><p class="sub">Add, edit and publish pieces. Selling prices are typed in by hand and shown exactly as entered.</p></div><div class="head-actions">' + (isRemote() ? '<button class="btn ghost" data-act="refresh">Refresh</button>' : '') + '<button class="btn primary" data-act="add-product">Add product</button></div></div>' +
+    '<div class="stats">' + stat(S.products.filter(isPublic).length, 'in showroom') + stat(act.filter((p) => p.status === 'hidden').length, 'hidden') + stat(S.products.filter((p) => p.status === 'archived').length, 'archived') + stat(flagged, 'without a price', flagged ? 'warn' : '') + '</div>' +
+    '<section class="toolbar" aria-label="Product filters"><div class="field grow"><label for="adm-q">Search</label><input id="adm-q" type="search" placeholder="Name, SKU or product ID" value="' + esc(f.q) + '" autocomplete="off"></div>' +
+    '<div class="field"><label for="adm-cat">Category</label><select id="adm-cat"><option value="all">All</option>' + sortedCats().map((c) => '<option value="' + esc(c.id) + '"' + (f.cat === c.id ? ' selected' : '') + '>' + esc(c.name) + (c.hidden ? ' (hidden)' : '') + '</option>').join('') + '</select></div>' +
+    '<div class="field"><label for="adm-type">Type</label><select id="adm-type"><option value="all">All</option>' + Object.keys(TYPES).map((k) => '<option value="' + k + '"' + (f.type === k ? ' selected' : '') + '>' + TYPES[k] + '</option>').join('') + '</select></div>' +
+    '<div class="field"><label for="adm-purity">Purity</label><select id="adm-purity"><option value="all">All</option>' + PURITIES.map((k) => '<option' + (f.purity === k ? ' selected' : '') + '>' + k + '</option>').join('') + '</select></div>' +
+    '<div class="field"><label for="adm-status">Status</label><select id="adm-status">' + [['active', 'Published + hidden'], ['all', 'All'], ['published', 'Published'], ['hidden', 'Hidden'], ['archived', 'Archived']].map((o) => '<option value="' + o[0] + '"' + (f.status === o[0] ? ' selected' : '') + '>' + o[1] + '</option>').join('') + '</select></div>' +
+    '<div class="field"><label for="adm-sort">Sort by</label><select id="adm-sort">' + [['updated', 'Recently updated'], ['name', 'Name A\u2013Z'], ['price-asc', 'Price: low to high'], ['price-desc', 'Price: high to low']].map((o) => '<option value="' + o[0] + '"' + (f.sort === o[0] ? ' selected' : '') + '>' + o[1] + '</option>').join('') + '</select></div><button class="btn ghost" data-act="adm-clear">Clear filters</button></section>' +
+    '<p class="result-count" id="adm-count" aria-live="polite"></p><div id="adm-list" class="plist"></div>';
+  updateAdminList();
+}
+function updateAdminList() {
+  const list = adminFiltered();
+  $('#adm-count').textContent = list.length + (list.length === 1 ? ' product' : ' products');
+  $('#adm-list').innerHTML = list.length ? list.map(productRow).join('') : '<div class="empty"><h3>No products match</h3><p>Change the filters or add a new product.</p><button class="btn ghost" data-act="adm-clear">Clear filters</button></div>';
+}
+handlers['adm-clear'] = () => { V.adm = { q: '', cat: 'all', type: 'all', purity: 'all', status: 'active', sort: 'updated' }; renderProducts($('#admin-body')); };
+handlers['preview'] = (el) => { V.gi = 0; go({ mode: 'shop', pid: el.dataset.id, preview: true }); };
+/** Sends the change to the server (or browser storage), then reports honestly. */
+async function afterChange(okMsg) {
+  const res = await persist();
+  const host = $('#admin-body'); if (host && V.mode === 'admin' && V.tab === 'products' && !V.edit) renderProducts(host);
+  if (res.ok) toast(okMsg);
+  else if (res.code !== 'conflict') toast('Not saved: ' + res.message + (res.code === 'network' ? ' It will keep retrying.' : ''), 'bad');
+  return res;
+}
+handlers['duplicate'] = (el) => {
+  const p = byId(el.dataset.id); const c = clone(p);
+  c.id = uid('p'); c.name = p.name + ' (copy)'; c.status = 'hidden'; c.createdAt = c.updatedAt = nowISO();
+  let sku = p.sku + '-COPY', n = 2; while (S.products.some((x) => x.sku.toLowerCase() === sku.toLowerCase())) sku = p.sku + '-COPY' + n++;
+  c.sku = sku; S.products.unshift(c); afterChange('Duplicated as hidden: ' + sku + '. Edit it to change the code.');
+};
+handlers['toggle-pub'] = (el) => {
+  const p = byId(el.dataset.id);
+  if (p.status === 'hidden') {
+    const r = priceInfo(p);
+    if (!r.ok) { toast('Cannot publish: ' + r.issue + ' Edit the product to add one.', 'bad'); return; }
+    p.status = 'published'; p.updatedAt = nowISO();
+    afterChange(catById(p.categoryId) && catById(p.categoryId).hidden ? 'Published, but its category is hidden, so it will not appear until the category is active again.' : 'Published \u201C' + p.name + '\u201D');
+  } else { p.status = 'hidden'; p.updatedAt = nowISO(); afterChange('Hidden \u201C' + p.name + '\u201D'); }
+};
+handlers['archive'] = async (el) => {
+  const p = byId(el.dataset.id);
+  if (!(await confirmDialog({ title: 'Archive this product?', body: '\u201C' + p.name + '\u201D will leave the showroom and the active list. You can restore it later from the Archived filter.', confirmText: 'Archive', danger: true }))) return;
+  p.status = 'archived'; p.updatedAt = nowISO(); afterChange('Archived \u201C' + p.name + '\u201D');
+};
+handlers['restore'] = async (el) => {
+  const p = byId(el.dataset.id);
+  if (!(await confirmDialog({ title: 'Restore this product?', body: '\u201C' + p.name + '\u201D comes back as Hidden. Publish it when you are ready.', confirmText: 'Restore' }))) return;
+  p.status = 'hidden'; p.updatedAt = nowISO(); afterChange('Restored as hidden');
+};
+handlers['delete'] = async (el) => {
+  const p = byId(el.dataset.id);
+  if (!(await confirmDialog({ title: 'Delete permanently?', body: '\u201C' + p.name + '\u201D (' + p.sku + ') and its photos will be removed' + (isRemote() ? ' from the server' : ' from this browser') + '. This cannot be undone.', confirmText: 'Delete permanently', danger: true }))) return;
+  S.products = S.products.filter((x) => x.id !== p.id); await gcImages(); afterChange('Deleted \u201C' + p.name + '\u201D');
+};
+
+/* ---------- editor: draft helpers ---------- */
+const NUMF = ['gold_hun', 'gold_chi', 'gold_li', 'diamondCarat'];
+const CURS = Object.keys(CatalogMath.CURRENCIES);
+function toDraft(p) {
+  const d = clone(p);
+  NUMF.forEach((k) => { d[k] = d[k] === null || d[k] === undefined ? '' : String(d[k]); });
+  const pr = d.price || {};
+  d.price = { value: pr.value === undefined || pr.value === null ? '' : String(pr.value), currency: pr.currency || 'USD' };
+  d.diamondDetails = d.diamondDetails || '';
+  d.images = (d.images || []).slice();
+  return d;
+}
+function blankProduct() {
+  const c = visibleCats()[0] || sortedCats()[0];
+  return toDraft({
+    id: uid('p'), sku: '', name: '', shortDesc: '', fullDesc: '', type: 'gold', categoryId: c ? c.id : '', subId: '', purity: '18K', gold_hun: '', gold_chi: '', gold_li: '', gold_weight_grams: '',
+    diamondCarat: '', diamondDetails: '', price: { value: '', currency: 'USD' }, images: [], cover: '', status: 'hidden', createdAt: nowISO(), updatedAt: nowISO()
+  });
+}
+function startEdit(draft, isNew) { V.edit = { draft, isNew, orig: JSON.stringify(draft), touched: new Set(), submitted: false }; }
+handlers['add-product'] = () => { startEdit(blankProduct(), true); renderProducts($('#admin-body')); window.scrollTo(0, 0); };
+handlers['edit'] = (el) => { startEdit(toDraft(byId(el.dataset.id)), false); renderProducts($('#admin-body')); window.scrollTo(0, 0); };
+function editorDirty() { if (!V.edit) return false; if ($('#f-name')) readForm(); return JSON.stringify(V.edit.draft) !== V.edit.orig; }
+
+/** Grams are derived from the unit inputs every time. A stale stored value is never trusted. */
+function goldGrams(d) { const u = CatalogMath.parseUnits(d); return u.grams === null ? '' : u.grams; }
+function normalizeDraft(d) {
+  const num = (v) => { const x = PX(v); return x === null || isNaN(x) ? '' : x; };
+  const c = catById(d.categoryId);
+  const g = hasGold(d.type), dm = hasDiamond(d.type);
+  const images = d.images.slice();
+  const pv = num(d.price.value);
+  return {
+    id: d.id, sku: d.sku.trim(), name: d.name.trim(), shortDesc: d.shortDesc.trim(), fullDesc: d.fullDesc.trim(), type: d.type,
+    categoryId: d.categoryId, subId: c && c.subs.some((s) => s.id === d.subId) ? d.subId : '',
+    purity: g ? d.purity : '', gold_hun: g ? num(d.gold_hun) : '', gold_chi: g ? num(d.gold_chi) : '', gold_li: g ? num(d.gold_li) : '', gold_weight_grams: g ? goldGrams(d) : '',
+    diamondCarat: dm ? num(d.diamondCarat) : '', diamondDetails: dm ? d.diamondDetails.trim() : '',
+    price: { value: pv, currency: d.price.currency },
+    images, cover: images.indexOf(d.cover) >= 0 ? d.cover : images[0] || '', status: d.status, createdAt: d.createdAt, updatedAt: d.updatedAt
+  };
+}
+
+/* ---------- editor: validation ---------- */
+const ERR_KEYS = ['name', 'sku', 'cat', 'status', 'purity', 'hun', 'chi', 'li', 'weight', 'carat', 'price'];
+function validateDraft(d) {
+  const e = {};
+  if (!d.name.trim()) e.name = 'Enter a product name.';
+  const sku = d.sku.trim();
+  if (!sku) e.sku = 'Enter a unique product code.';
+  else if (!/^[A-Za-z0-9][A-Za-z0-9._\-\/ ]*$/.test(sku)) e.sku = 'Use letters, numbers, dots, dashes or slashes.';
+  else { const dup = S.products.find((p) => p.id !== d.id && p.sku.trim().toLowerCase() === sku.toLowerCase()); if (dup) e.sku = 'Code already used by \u201C' + dup.name + '\u201D. Each code must be unique.'; }
+  if (!catById(d.categoryId)) e.cat = 'Choose a category.';
+  if (hasGold(d.type)) {
+    if (!d.purity) e.purity = 'Choose a gold purity.';
+    const wu = CatalogMath.parseUnits(d);
+    ['hun', 'chi', 'li'].forEach((k) => { if (wu.errors[k]) e[k] = wu.errors[k]; });
+    if (wu.grams !== null && !(wu.grams > 0)) e.weight = 'Gold weight must be greater than zero. Enter at least one of \u17A0\u17CA\u17BB\u1793, \u1787\u17B8 or \u179B\u17B8.';
+  }
+  if (hasDiamond(d.type)) {
+    const v = PX(d.diamondCarat);
+    if (v === null) e.carat = 'Enter the diamond weight in carats.';
+    else if (isNaN(v)) e.carat = 'Diamond weight must be a number, for example 0.50.';
+    else if (v <= 0) e.carat = 'Diamond weight must be greater than zero.';
+  }
+  const raw = PX(d.price.value);
+  if (raw === null) { if (d.status === 'published') e.price = 'Enter a selling price before publishing.'; }
+  else { const r = CatalogMath.parsePrice(d.price); if (!r.ok) e.price = r.issue; }
+  if (d.status === 'published' && e.price) e.status = 'This product cannot be published without a valid selling price.';
+  return e;
+}
+function showErrors(errs) {
+  const ed = V.edit; if (!ed) return;
+  ERR_KEYS.forEach((k) => {
+    const el = $('#err-' + k); if (!el) return;
+    const show = (ed.submitted || ed.touched.has(k)) && errs[k];
+    el.textContent = show ? errs[k] : '';
+    $$('[data-k="' + k + '"]').forEach((i) => { if (show) i.setAttribute('aria-invalid', 'true'); else i.removeAttribute('aria-invalid'); });
+  });
+}
+
+/* ---------- editor: render ---------- */
+const curSel = (id, key, val, label) => '<select id="' + id + '" data-k="' + key + '" aria-label="' + label + '">' + CURS.map((c) => '<option value="' + c + '"' + (val === c ? ' selected' : '') + '>' + c + ' ' + CatalogMath.CURRENCIES[c].symbol + '</option>').join('') + '</select>';
+const fld = (key, label, control, o) => { o = o || {}; return '<div class="field' + (o.cls ? ' ' + o.cls : '') + '"' + (o.show ? ' data-show="' + o.show + '"' : '') + '><label for="' + (o.forId || 'f-' + key) + '">' + label + (o.req ? ' <span class="req" aria-hidden="true">*</span>' : '') + '</label>' + control + (o.hint ? '<p class="hint">' + o.hint + '</p>' : '') + '<p class="err" id="err-' + key + '" role="alert"></p></div>'; };
+const inp = (id, key, val, o) => { o = o || {}; return '<input id="' + id + '" data-k="' + key + '" type="text"' + (o.num ? ' inputmode="decimal"' : '') + ' value="' + esc(val) + '" autocomplete="off"' + (o.max ? ' maxlength="' + o.max + '"' : '') + (o.ph ? ' placeholder="' + o.ph + '"' : '') + '>'; };
+
+function renderEditor(host) {
+  const ed = V.edit, d = ed.draft;
+  const catOpts = sortedCats().map((c) => '<option value="' + esc(c.id) + '"' + (c.id === d.categoryId ? ' selected' : '') + '>' + esc(c.name) + (c.hidden ? ' (hidden)' : '') + '</option>').join('');
+  host.innerHTML = '<div id="editor"><div class="page-head"><div><p class="crumb-link"><button class="linklike" data-act="cancel-edit">\u2190 Products</button></p><h1>' + (ed.isNew ? 'Add product' : 'Edit product') + '</h1><p class="sub mono">' + esc(d.id) + '</p></div><div class="head-actions"><button class="btn ghost" data-act="cancel-edit">Cancel</button><button class="btn primary" data-act="save-product">Save product</button></div></div>' +
+    '<div class="editor-grid"><div class="editor-main">' +
+    '<section class="panel"><h2>Basics</h2><div class="form-grid">' +
+    fld('name', 'Product name', inp('f-name', 'name', d.name, { max: 120 }), { req: true }) +
+    fld('sku', 'Product code', inp('f-sku', 'sku', d.sku, { max: 40, ph: 'AUR-R-010' }), { req: true, hint: 'Unique. The internal ID is generated automatically and never changes.' }) +
+    fld('short', 'Short description', inp('f-short', 'short', d.shortDesc, { max: 140 }), { cls: 'span2' }) +
+    fld('full', 'Full description', '<textarea id="f-full" data-k="full" rows="4">' + esc(d.fullDesc) + '</textarea>', { cls: 'span2' }) +
+    fld('cat', 'Category', '<select id="f-cat" data-k="cat">' + catOpts + '</select>', { req: true }) +
+    fld('sub', 'Subcategory', '<select id="f-sub" data-k="sub"></select>') +
+    fld('type', 'Product type', '<select id="f-type" data-k="type">' + Object.keys(TYPES).map((k) => '<option value="' + k + '"' + (d.type === k ? ' selected' : '') + '>' + TYPES[k] + '</option>').join('') + '</select>', { req: true }) +
+    fld('status', 'Publication status', '<select id="f-status" data-k="status"' + (d.status === 'archived' ? ' disabled' : '') + '><option value="hidden"' + (d.status === 'hidden' ? ' selected' : '') + '>Hidden</option><option value="published"' + (d.status === 'published' ? ' selected' : '') + '>Published</option>' + (d.status === 'archived' ? '<option value="archived" selected>Archived (restore from the list)</option>' : '') + '</select>', { hint: 'Only published products with a selling price appear in the showroom.' }) +
+    '</div></section>' +
+
+    '<section class="panel"><h2>Selling price</h2><div class="form-grid">' +
+    fld('price', 'Selling price', '<div class="money">' + inp('f-price', 'price', d.price.value, { num: true, ph: '0' }) + curSel('f-price-cur', 'price', d.price.currency, 'Selling price currency') + '</div>', { forId: 'f-price', hint: 'Typed by hand and shown to customers exactly as entered, with the currency symbol. Nothing is converted.' }) +
+    '</div></section>' +
+
+    '<section class="panel" data-show="gold"><h2>Gold</h2><div class="form-grid">' +
+    fld('purity', 'Gold purity', '<select id="f-purity" data-k="purity">' + PURITIES.map((k) => '<option' + (d.purity === k ? ' selected' : '') + '>' + k + '</option>').join('') + '</select>', { req: true }) +
+    '<fieldset class="units span2"><legend>Gold weight <span class="req" aria-hidden="true">*</span> <small>Traditional Cambodian units. Leave a box blank or 0 if not used.</small></legend><div class="units-row">' +
+    fld('hun', '\u17A0\u17CA\u17BB\u1793 <small>Hun \u00B7 0.375 g</small>', inp('f-hun', 'hun', d.gold_hun, { num: true, ph: '0' })) +
+    fld('chi', '\u1787\u17B8 <small>Chi \u00B7 3.75 g</small>', inp('f-chi', 'chi', d.gold_chi, { num: true, ph: '0' })) +
+    fld('li', '\u179B\u17B8 <small>Li \u00B7 0.0375 g</small>', inp('f-li', 'li', d.gold_li, { num: true, ph: '0' })) +
+    '</div><div class="weight-total" id="weight-total" aria-live="polite"></div><p class="err" id="err-weight" role="alert"></p></fieldset></div></section>' +
+
+    '<section class="panel" data-show="dia"><h2>Diamond</h2><div class="form-grid">' +
+    fld('carat', 'Diamond weight (carats)', inp('f-carat', 'carat', d.diamondCarat, { num: true, ph: '0.50' }), { req: true }) +
+    fld('ddetails', 'Diamond details', '<textarea id="f-ddetails" data-k="ddetails" rows="2" placeholder="Cut, colour, clarity, setting">' + esc(d.diamondDetails) + '</textarea>', { cls: 'span2', hint: 'Shown to customers and included in Copy details.' }) + '</div></section>' +
+
+    '<section class="panel"><h2>Photos</h2><p class="sub">Choose several at once (on iPhone or iPad this opens your photo library). The cover photo shows on the product card; the rest are in the gallery. Photos stay in this browser during the demo; production moves them to Google Drive.</p>' +
+    '<label class="dropzone" id="dropzone" for="f-files"><input id="f-files" type="file" accept="image/*" multiple><span><b>Choose photos</b> or drop them here</span></label><ul class="igrid" id="img-grid"></ul></section>' +
+    '</div><aside class="price-panel" aria-label="Customer card preview"><h2>Customer card preview</h2><div id="card-preview"></div><p class="hint">Updates as you type. Unsaved changes are not visible to customers.</p></aside></div>' +
+    '<div class="savebar"><div class="savebar-price" id="savebar-price"></div><div class="head-actions"><button class="btn ghost" data-act="cancel-edit">Cancel</button><button class="btn primary" data-act="save-product">Save product</button></div></div></div>';
+  fillSubs(); applyEditorVisibility(); renderEditorImages(); updatePreviewPanel();
+  const dz = $('#dropzone');
+  ['dragenter', 'dragover'].forEach((ev) => dz.addEventListener(ev, (e) => { e.preventDefault(); dz.classList.add('over'); }));
+  ['dragleave', 'drop'].forEach((ev) => dz.addEventListener(ev, (e) => { e.preventDefault(); dz.classList.remove('over'); }));
+  dz.addEventListener('drop', (e) => addFiles(e.dataTransfer.files));
+}
+function fillSubs() {
+  const d = V.edit.draft, c = catById(d.categoryId), sel = $('#f-sub');
+  sel.innerHTML = '<option value="">None</option>' + (c ? c.subs.map((s) => '<option value="' + esc(s.id) + '"' + (s.id === d.subId ? ' selected' : '') + '>' + esc(s.name) + '</option>').join('') : '');
+  if (!c || !c.subs.some((s) => s.id === d.subId)) { sel.value = ''; d.subId = ''; }
+}
+function applyEditorVisibility() {
+  const d = V.edit.draft, f = { gold: hasGold(d.type), dia: hasDiamond(d.type) };
+  $$('#editor [data-show]').forEach((el) => { el.hidden = !f[el.dataset.show]; });
+}
+function readForm() {
+  const d = V.edit.draft, g = (id) => { const e = $('#' + id); return e ? e.value : ''; };
+  d.name = g('f-name'); d.sku = g('f-sku'); d.shortDesc = g('f-short'); d.fullDesc = g('f-full');
+  d.categoryId = g('f-cat'); d.subId = g('f-sub'); d.type = g('f-type'); if (d.status !== 'archived') d.status = g('f-status');
+  d.purity = g('f-purity'); d.gold_hun = g('f-hun'); d.gold_chi = g('f-chi'); d.gold_li = g('f-li');
+  d.diamondCarat = g('f-carat'); d.diamondDetails = g('f-ddetails');
+  d.price = { value: g('f-price'), currency: g('f-price-cur') };
+}
+function updateWeightTotal() {
+  const el = $('#weight-total'); if (!el) return;
+  const u = CatalogMath.parseUnits(V.edit.draft);
+  if (u.grams === null) { el.className = 'weight-total warn'; el.textContent = 'Fix the highlighted weight box to see the total.'; return; }
+  el.className = 'weight-total';
+  el.innerHTML = '<span>Total weight</span><b>' + esc(fmtG(u.grams)) + ' g</b><small>(' + fmtU(u.hun) + ' \u00D7 0.375) + (' + fmtU(u.chi) + ' \u00D7 3.75) + (' + fmtU(u.li) + ' \u00D7 0.0375)</small>';
+}
+function updatePreviewPanel() {
+  updateWeightTotal();
+  const d = V.edit.draft, host = $('#card-preview'), bar = $('#savebar-price'); if (!host) return;
+  const p = Object.assign({}, d, { name: d.name || 'Product name', sku: d.sku || 'CODE' });
+  host.innerHTML = cardHTML(p, true);
+  const r = priceInfo(d);
+  bar.innerHTML = r.ok ? priceHTML(d) : '<span class="price-missing">No selling price yet</span>';
+}
+function onEditorInput(e) {
+  const t = e.target; if (!V.edit || !t.closest || !t.closest('#editor')) return;
+  if (t.id === 'f-files') return;
+  readForm();
+  if (t.id === 'f-cat') { V.edit.draft.subId = ''; fillSubs(); }
+  applyEditorVisibility(); updatePreviewPanel();
+  const k = t.dataset && t.dataset.k; if (k) V.edit.touched.add(k);
+  if (t.id === 'f-type' || t.id === 'f-purity') ['purity', 'hun', 'chi', 'li', 'weight', 'carat', 'price', 'status'].forEach((x) => V.edit.touched.add(x));
+  if (t.id === 'f-status') V.edit.touched.add('price');
+  if (t.id === 'f-hun' || t.id === 'f-chi' || t.id === 'f-li') V.edit.touched.add('weight');
+  showErrors(validateDraft(V.edit.draft));
+}
+document.addEventListener('input', onEditorInput);
+document.addEventListener('change', onEditorInput);
+
+/* ---------- editor: photos ---------- */
+function renderEditorImages() {
+  const d = V.edit.draft, ul = $('#img-grid'); if (!ul) return;
+  if (d.cover && d.images.indexOf(d.cover) < 0) d.cover = '';
+  if (!d.cover && d.images.length) d.cover = d.images[0];
+  ul.innerHTML = d.images.length ? d.images.map((id, i) => '<li class="ithumb' + (id === d.cover ? ' is-cover' : '') + '"><button type="button" class="ithumb-img" data-act="img-view" data-i="' + i + '" aria-label="View photo ' + (i + 1) + '">' + imgTag(id, '') + '</button>' +
+    (Pending.has(id) ? '<span class="badge-new">Unsaved</span>' : '') + (id === d.cover ? '<span class="badge-cover">Cover</span>' : '') +
+    '<div class="ithumb-bar"><button type="button" class="btn sm ghost" data-act="img-cover" data-i="' + i + '"' + (id === d.cover ? ' disabled' : '') + '>Set cover</button><button type="button" class="icon-btn" data-act="img-move" data-i="' + i + '" data-dir="-1" aria-label="Move earlier"' + (i === 0 ? ' disabled' : '') + '>\u2190</button><button type="button" class="icon-btn" data-act="img-move" data-i="' + i + '" data-dir="1" aria-label="Move later"' + (i === d.images.length - 1 ? ' disabled' : '') + '>\u2192</button><button type="button" class="icon-btn danger-text" data-act="img-del" data-i="' + i + '" aria-label="Remove photo">\u00D7</button></div>' +
+    '<div class="ithumb-bar"><button type="button" class="btn sm ghost" data-act="img-copy" data-id="' + esc(id) + '">Copy</button><button type="button" class="btn sm ghost" data-act="img-share" data-id="' + esc(id) + '">Share</button><button type="button" class="btn sm ghost" data-act="img-save" data-id="' + esc(id) + '" data-i="' + i + '">Save</button></div></li>').join('') + '<li class="igrid-all"><button type="button" class="btn sm" data-act="admin-copy-photos">Copy all photos</button><button type="button" class="btn sm" data-act="admin-share-photos">Share all photos</button></li>' : '<li class="igrid-empty">No photos yet.</li>';
+  updatePreviewPanel();
+}
+async function addFiles(fileList) {
+  const files = Array.from(fileList || []); if (!files.length || !V.edit) return;
+  let bad = 0, good = 0;
+  for (const f of files) {
+    try { const blob = await prepareImage(f); const id = Pending.add(blob, f.name); V.edit.draft.images.push(id); if (!V.edit.draft.cover) V.edit.draft.cover = id; good++; } catch (e) { bad++; }
+  }
+  renderEditorImages();
+  if (good) toast(good + ' photo' + (good > 1 ? 's' : '') + ' added. Save the product to keep ' + (good > 1 ? 'them' : 'it') + '.');
+  if (bad) toast(bad + ' file' + (bad > 1 ? 's were' : ' was') + ' skipped because ' + (bad > 1 ? 'they are' : 'it is') + ' not an image.', 'bad');
+}
+document.addEventListener('change', (e) => { if (e.target && e.target.id === 'f-files') { addFiles(e.target.files); e.target.value = ''; } });
+handlers['img-view'] = (el) => openLightbox(V.edit.draft.images.slice(), Number(el.dataset.i));
+handlers['img-cover'] = (el) => { const d = V.edit.draft, i = Number(el.dataset.i); d.cover = d.images[i]; renderEditorImages(); toast('Cover photo changed.'); };
+handlers['img-move'] = (el) => { const d = V.edit.draft, i = Number(el.dataset.i), j = i + Number(el.dataset.dir); if (j < 0 || j >= d.images.length) return; const t = d.images[i]; d.images[i] = d.images[j]; d.images[j] = t; renderEditorImages(); };
+handlers['img-del'] = (el) => { const d = V.edit.draft, i = Number(el.dataset.i), id = d.images[i]; d.images.splice(i, 1); Pending.release(id); renderEditorImages(); };
+handlers['admin-copy-photos'] = () => copyPhotos(V.edit.draft.images.slice());
+handlers['admin-share-photos'] = () => shareImages(V.edit.draft.images.slice());
+
+/* ---------- editor: save / cancel ---------- */
+handlers['cancel-edit'] = async () => {
+  if (editorDirty() && !(await confirmDialog({ title: 'Discard unsaved changes?', body: 'Your edits and any newly added photos will be thrown away.', confirmText: 'Discard changes', danger: true }))) return;
+  Pending.releaseAll(); V.edit = null; renderProducts($('#admin-body')); window.scrollTo(0, 0);
+};
+handlers['save-product'] = async () => {
+  const ed = V.edit; if (!ed) return;
+  readForm(); ed.submitted = true;
+  const errs = validateDraft(ed.draft); showErrors(errs);
+  const keys = Object.keys(errs);
+  if (keys.length) {
+    const first = $('[data-k="' + keys[0] + '"]') || $('#f-name');
+    if (first) { first.focus(); first.scrollIntoView({ block: 'center', behavior: 'smooth' }); }
+    toast('Fix ' + keys.length + ' highlighted field' + (keys.length > 1 ? 's' : '') + ' before saving.', 'bad'); return;
+  }
+  const p = normalizeDraft(ed.draft); p.updatedAt = nowISO();
+  const saveBtns = $$('[data-act="save-product"]'); saveBtns.forEach((b) => { b.disabled = true; });
+  try {
+    let map = {};
+    try { map = await Pending.commit(p.images); } catch (e) { toast('A photo could not be uploaded: ' + e.message + ' Nothing was saved.', 'bad'); return; }
+    if (isRemote()) { p.images = p.images.map((i) => map[i] || i); p.cover = map[p.cover] || p.cover; ed.draft.images = p.images.slice(); ed.draft.cover = p.cover; }
+    const prev = ed.isNew ? null : clone(S.products.find((x) => x.id === p.id));
+    if (ed.isNew) { p.createdAt = p.updatedAt; S.products.unshift(p); } else { const i = S.products.findIndex((x) => x.id === p.id); p.createdAt = S.products[i].createdAt; p.updatedBy = S.products[i].updatedBy; S.products[i] = p; }
+    const res = await persist();
+    if (!res.ok) {
+      if (res.code === 'conflict') { Pending.releaseAll(); V.edit = null; renderProducts($('#admin-body')); window.scrollTo(0, 0); return; }
+      toast('Not saved: ' + res.message + (res.code === 'network' ? ' Your edits are still here. Press Save again when the connection is back.' : ''), 'bad');
+      if (res.code === 'invalid') { /* the server refused it; the list already shows the old version */ }
+      renderEditorImages(); return;
+    }
+    Pending.releaseAll(); await gcImages(); V.edit = null; renderProducts($('#admin-body')); window.scrollTo(0, 0);
+    toast((ed.isNew ? 'Added ' : 'Saved ') + '\u201C' + p.name + '\u201D' + (isRemote() ? ' to the server' : ''));
+  } finally { saveBtns.forEach((b) => { b.disabled = false; }); }
+};
+
+/* =====================================================================
+   ADMIN: settings, categories, demo data
+   ===================================================================== */
+
+/* =====================================================================
+   SETTINGS (weight display only; there are no rates or currency settings)
+   ===================================================================== */
+function renderSettings(host) {
+  const s = S.settings;
+  host.innerHTML = '<div class="page-head"><div><h1>Settings</h1><p class="sub">Selling prices are typed on each product and shown as entered. Prices are never converted between currencies.</p></div></div>' +
+    '<section class="panel"><h2>Gold weight display</h2><p class="sub">What customers see in the showroom: cards, product pages and copied details.</p>' +
+    '<fieldset class="radios wd"><legend class="sr-only">Weight display</legend>' + Object.keys(WEIGHT_MODES).map((k) => '<label class="radio"><input type="radio" name="wd" value="' + k + '"' + ((s.weightDisplay || 'both') === k ? ' checked' : '') + '> <span>' + WEIGHT_MODES[k] + (k === 'both' ? ' <small>(default)</small>' : '') + '</span></label>').join('') + '</fieldset>' +
+    '<div class="wd-preview" id="wd-preview"></div>' +
+    '<dl class="kv units-ref"><div><dt>1 \u1787\u17B8 (Chi)</dt><dd>3.75 g</dd></div><div><dt>1 \u17A0\u17CA\u17BB\u1793 (Hun)</dt><dd>0.375 g</dd></div><div><dt>1 \u179B\u17B8 (Li)</dt><dd>0.0375 g</dd></div></dl>' +
+    '<p class="hint">Customers always see the order \u1787\u17B8, \u17A0\u17CA\u17BB\u1793, \u179B\u17B8, even though the admin boxes start with \u17A0\u17CA\u17BB\u1793.</p></section>';
+  wdPreview();
+}
+function wdPreview() {
+  const el = $('#wd-preview'); if (!el) return;
+  el.innerHTML = '<span class="eyebrow">Example: \u17A0\u17CA\u17BB\u1793 5, \u1787\u17B8 1, \u179B\u17B8 8</span>' + weightHTML({ type: 'gold', gold_hun: 5, gold_chi: 1, gold_li: 8 }, true);
+}
+function setWeightDisplay(mode) {
+  S.settings.weightDisplay = mode; persist(); wdPreview(); toast('Weight display: ' + WEIGHT_MODES[mode]);
+}
+
+/* =====================================================================
+   CATEGORIES
+   ===================================================================== */
+const catProducts = (id) => S.products.filter((p) => p.categoryId === id);
+function renderCategories(host) {
+  const cats = sortedCats();
+  host.innerHTML = '<div class="page-head"><div><h1>Categories</h1><p class="sub">Products point to a category by a permanent ID, so renaming never breaks an assignment. The showroom updates right away.</p></div><button class="btn primary" data-act="cat-edit" data-id="">Add category</button></div><div class="cat-list">' +
+    cats.map((c, i) => {
+      const n = catProducts(c.id).length, live = catProducts(c.id).filter((p) => p.status === 'published').length;
+      return '<article class="ccard' + (c.hidden ? ' is-hidden' : '') + '"><div class="ccover">' + imgTag(c.cover, '') + '</div><div class="cmain"><h3>' + esc(c.name) + ' <span class="pill ' + (c.hidden ? 'hidden' : 'published') + '">' + (c.hidden ? 'Hidden' : 'Active') + '</span></h3>' + (c.description ? '<p class="sub">' + esc(c.description) + '</p>' : '') +
+        '<p class="meta">' + n + ' product' + (n === 1 ? '' : 's') + (live ? ' (' + live + ' published)' : '') + ' <span class="mono dim">' + esc(c.id) + '</span></p>' +
+        '<ul class="subs">' + c.subs.map((s) => '<li><span>' + esc(s.name) + '</span><button class="linklike" data-act="sub-rename" data-c="' + esc(c.id) + '" data-s="' + esc(s.id) + '">Rename</button></li>').join('') + '</ul>' +
+        '<div class="sub-add"><label class="sr-only" for="ns-' + esc(c.id) + '">New subcategory in ' + esc(c.name) + '</label><input id="ns-' + esc(c.id) + '" type="text" placeholder="New subcategory" maxlength="40" autocomplete="off"><button class="btn sm" data-act="sub-add" data-c="' + esc(c.id) + '">Add</button></div></div>' +
+        '<div class="cact"><div class="reorder"><button class="icon-btn" data-act="cat-move" data-id="' + esc(c.id) + '" data-dir="-1" aria-label="Move ' + esc(c.name) + ' up"' + (i === 0 ? ' disabled' : '') + '>\u2191</button><button class="icon-btn" data-act="cat-move" data-id="' + esc(c.id) + '" data-dir="1" aria-label="Move ' + esc(c.name) + ' down"' + (i === cats.length - 1 ? ' disabled' : '') + '>\u2193</button></div>' +
+        '<button class="btn sm" data-act="cat-edit" data-id="' + esc(c.id) + '">Edit</button><button class="btn sm ghost" data-act="cat-toggle" data-id="' + esc(c.id) + '">' + (c.hidden ? 'Reactivate' : 'Hide') + '</button><button class="btn sm ghost" data-act="cat-reassign" data-id="' + esc(c.id) + '"' + (n ? '' : ' disabled') + '>Move products</button><button class="btn sm ghost danger-text" data-act="cat-delete" data-id="' + esc(c.id) + '"' + (n ? ' disabled title="Move its ' + n + ' products first"' : '') + '>Delete</button></div></article>';
+    }).join('') + '</div>';
+}
+handlers['cat-move'] = (el) => {
+  const list = sortedCats(), i = list.findIndex((c) => c.id === el.dataset.id), j = i + Number(el.dataset.dir);
+  if (j < 0 || j >= list.length) return;
+  const t = list[i]; list[i] = list[j]; list[j] = t; list.forEach((c, n) => { c.order = n; });
+  persist(); renderCategories($('#admin-body'));
+};
+handlers['cat-toggle'] = async (el) => {
+  const c = catById(el.dataset.id);
+  if (c.hidden) { c.hidden = false; persist(); renderCategories($('#admin-body')); toast('\u201C' + c.name + '\u201D is active again.'); return; }
+  const n = catProducts(c.id).filter((p) => p.status === 'published').length;
+  if (n && !(await confirmDialog({ title: 'Hide this category?', body: n + ' published product' + (n === 1 ? '' : 's') + ' in \u201C' + c.name + '\u201D will disappear from the showroom while it is hidden. They stay assigned to it and return when you reactivate the category. To keep them visible, move them to another category first.', confirmText: 'Hide category', danger: true }))) return;
+  c.hidden = true; persist(); renderCategories($('#admin-body')); toast('\u201C' + c.name + '\u201D hidden.');
+};
+handlers['cat-delete'] = async (el) => {
+  const c = catById(el.dataset.id);
+  if (catProducts(c.id).length) { toast('Move this category\u2019s products first.', 'bad'); return; }
+  if (!(await confirmDialog({ title: 'Delete this category?', body: '\u201C' + c.name + '\u201D has no products. It will be removed along with its subcategories.', confirmText: 'Delete category', danger: true }))) return;
+  S.categories = S.categories.filter((x) => x.id !== c.id); sortedCats().forEach((x, n) => { x.order = n; });
+  persist(); await gcImages(); renderCategories($('#admin-body')); toast('Category deleted.');
+};
+handlers['cat-edit'] = (el) => {
+  const c = el.dataset.id ? catById(el.dataset.id) : null;
+  const st = { cover: c ? c.cover : null, pend: null };
+  const api = openModal({
+    title: c ? 'Edit category' : 'Add category',
+    body: '<div class="form-grid one"><div class="field"><label for="ce-name">Name <span class="req" aria-hidden="true">*</span></label><input id="ce-name" type="text" maxlength="40" value="' + esc(c ? c.name : '') + '" autocomplete="off" data-autofocus><p class="err" id="ce-err" role="alert"></p></div>' +
+      '<div class="field"><label for="ce-desc">Description</label><textarea id="ce-desc" rows="3" maxlength="200">' + esc(c ? c.description : '') + '</textarea></div>' +
+      '<div class="field"><label for="ce-file">Cover image</label><div class="cover-edit"><div class="ccover" id="ce-prev">' + imgTag(st.cover, '') + '</div><div><input id="ce-file" type="file" accept="image/*"><p><button type="button" class="linklike" id="ce-remove">Remove cover</button></p></div></div></div></div>',
+    actions: [{ id: 'cancel', label: 'Cancel', kind: 'ghost' }, { id: 'save', label: c ? 'Save category' : 'Add category', kind: 'primary' }],
+    onClose: () => { if (st.pend) Pending.release(st.pend); },
+    onAction: async (id, a) => {
+      if (id !== 'save') { a.close(); return; }
+      const name = $('#ce-name', a.el).value.trim(), err = $('#ce-err', a.el);
+      if (!name) { err.textContent = 'Enter a category name.'; return; }
+      if (S.categories.some((x) => x.id !== (c && c.id) && x.name.trim().toLowerCase() === name.toLowerCase())) { err.textContent = 'Another category already uses this name.'; return; }
+      let cover = st.cover;
+      if (st.pend) { try { const m = await Pending.commit([st.pend]); cover = m[st.pend] || st.pend; } catch (e) { toast('The photo could not be uploaded: ' + e.message, 'bad'); return; } st.pend = null; }
+      const desc = $('#ce-desc', a.el).value.trim();
+      if (c) { c.name = name; c.description = desc; c.cover = cover; }
+      else S.categories.push({ id: uid('c'), name, description: desc, cover, hidden: false, order: S.categories.length, subs: [] });
+      persist(); await gcImages(); a.close(); renderCategories($('#admin-body')); toast(c ? 'Category saved. Product assignments are unchanged.' : 'Category added.');
+    }
+  });
+  $('#ce-file', api.el).addEventListener('change', async (e) => {
+    const f = e.target.files[0]; if (!f) return;
+    try { const blob = await prepareImage(f); if (st.pend) Pending.release(st.pend); st.pend = Pending.add(blob, f.name); st.cover = st.pend; $('#ce-prev', api.el).innerHTML = imgTag(st.pend, ''); }
+    catch (er) { toast('That file is not an image.', 'bad'); }
+  });
+  $('#ce-remove', api.el).addEventListener('click', () => { if (st.pend) { Pending.release(st.pend); st.pend = null; } st.cover = null; $('#ce-prev', api.el).innerHTML = imgTag(null, ''); });
+};
+handlers['sub-add'] = (el) => {
+  const c = catById(el.dataset.c), inp = $('#ns-' + el.dataset.c), name = inp.value.trim();
+  if (!name) { toast('Type a subcategory name first.', 'bad'); inp.focus(); return; }
+  if (c.subs.some((s) => s.name.toLowerCase() === name.toLowerCase())) { toast('That subcategory already exists.', 'bad'); return; }
+  c.subs.push({ id: uid('s'), name }); persist(); renderCategories($('#admin-body')); toast('Subcategory added.');
+};
+handlers['sub-rename'] = (el) => {
+  const c = catById(el.dataset.c), s = c.subs.find((x) => x.id === el.dataset.s);
+  openModal({
+    title: 'Rename subcategory', body: '<div class="field"><label for="sr-name">Name</label><input id="sr-name" type="text" maxlength="40" value="' + esc(s.name) + '" autocomplete="off" data-autofocus><p class="err" id="sr-err" role="alert"></p></div>',
+    actions: [{ id: 'cancel', label: 'Cancel', kind: 'ghost' }, { id: 'save', label: 'Rename', kind: 'primary' }],
+    onAction: (id, a) => {
+      if (id !== 'save') { a.close(); return; }
+      const name = $('#sr-name', a.el).value.trim();
+      if (!name) { $('#sr-err', a.el).textContent = 'Enter a name.'; return; }
+      if (c.subs.some((x) => x.id !== s.id && x.name.toLowerCase() === name.toLowerCase())) { $('#sr-err', a.el).textContent = 'Another subcategory already uses this name.'; return; }
+      s.name = name; persist(); a.close(); renderCategories($('#admin-body')); toast('Subcategory renamed everywhere.');
+    }
+  });
+};
+handlers['cat-reassign'] = (el) => {
+  const c = catById(el.dataset.id), prods = catProducts(c.id), others = sortedCats().filter((x) => x.id !== c.id);
+  if (!others.length) { toast('Add another category to move products into.', 'bad'); return; }
+  const subOpts = (cid) => '<option value="">None</option>' + catById(cid).subs.map((s) => '<option value="' + esc(s.id) + '">' + esc(s.name) + '</option>').join('');
+  const api = openModal({
+    title: 'Move products out of \u201C' + c.name + '\u201D',
+    body: '<div class="form-grid"><div class="field"><label for="ra-cat">Move to</label><select id="ra-cat">' + others.map((o) => '<option value="' + esc(o.id) + '">' + esc(o.name) + (o.hidden ? ' (hidden)' : '') + '</option>').join('') + '</select></div><div class="field"><label for="ra-sub">Subcategory</label><select id="ra-sub">' + subOpts(others[0].id) + '</select></div></div>' +
+      '<fieldset class="checks"><legend>Products to move</legend>' + prods.map((p) => '<label class="check"><input type="checkbox" value="' + esc(p.id) + '" checked> <span>' + esc(p.name) + ' <small class="mono">' + esc(p.sku) + '</small></span></label>').join('') + '</fieldset><p class="err" id="ra-err" role="alert"></p>',
+    actions: [{ id: 'cancel', label: 'Cancel', kind: 'ghost' }, { id: 'ok', label: 'Move products', kind: 'primary' }],
+    onAction: (id, a) => {
+      if (id !== 'ok') { a.close(); return; }
+      const ids = $$('input[type=checkbox]:checked', a.el).map((x) => x.value);
+      if (!ids.length) { $('#ra-err', a.el).textContent = 'Select at least one product.'; return; }
+      const target = $('#ra-cat', a.el).value, sub = $('#ra-sub', a.el).value;
+      ids.forEach((pid) => { const p = byId(pid); p.categoryId = target; p.subId = sub; p.updatedAt = nowISO(); });
+      persist(); a.close(); renderCategories($('#admin-body')); toast(ids.length + ' product' + (ids.length === 1 ? '' : 's') + ' moved to \u201C' + catName(target) + '\u201D.');
+    }
+  });
+  $('#ra-cat', api.el).addEventListener('change', (e) => { $('#ra-sub', api.el).innerHTML = subOpts(e.target.value); });
+};
+
+/* =====================================================================
+   DEMO DATA
+   ===================================================================== */
+function renderDemo(host) {
+  const bytes = new Blob([JSON.stringify(S)]).size;
+  host.innerHTML = '<div class="page-head"><div><h1>Demo data</h1><p class="sub">Everything here lives in this browser only. Nothing is sent anywhere.</p></div></div>' +
+    '<section class="panel"><h2>Storage</h2><dl class="kv"><div><dt>Catalog data</dt><dd>' + (bytes / 1024).toFixed(1) + ' KB in localStorage' + (storageOk ? '' : ' <span class="flag">unavailable</span>') + '</dd></div><div><dt>Images</dt><dd>' + Images.cache.size + ' files, ' + (Images.totalBytes() / 1048576).toFixed(2) + ' MB in ' + (Images.ok ? 'IndexedDB' : 'memory only <span class="flag">will be lost on refresh</span>') + '</dd></div><div><dt>Browser quota</dt><dd id="quota">checking\u2026</dd></div></dl>' +
+    '<p class="hint">These images are not permanent storage. Clearing site data removes them. The production version stores images in Google Drive.</p></section>' +
+    '<section class="panel"><h2>Reset</h2><p>Replace everything (products, categories, settings and images) with the original sample data.</p><div class="form-actions"><button class="btn danger" data-act="reset-demo">Reset demo data</button></div></section>' +
+    '<section class="panel"><h2>Connect to your server</h2><p>Paste the Web app URL you get after deploying the Google Apps Script. Products and photos will then be stored in your Google Sheet and Drive instead of this browser, and staff sign in with PINs.</p><div class="field"><label for="srv-url">Web app URL</label><input id="srv-url" type="text" inputmode="url" autocomplete="off" placeholder="https://script.google.com/macros/s/.../exec"><p class="err" id="srv-err" role="alert"></p></div><div class="form-actions"><button class="btn primary" data-act="connect-server">Connect</button></div></section>' +
+    '<section class="panel"><h2>Ready for Phase 2</h2><ul class="plain"><li><b>Weight and price formatting</b> live in one pure module (units.js) with no browser dependencies. The same file runs in Apps Script.</li><li><b>Data access</b> goes through one <code>Repo</code> object. Replace it with a Google Sheets adapter.</li><li><b>Image files</b> go through one <code>Images</code> object. Replace it with a Google Drive adapter.</li><li>Product, category and image IDs are generated and permanent, so rows and files can be matched later.</li></ul></section>';
+  try { navigator.storage.estimate().then((e) => { const q = $('#quota'); if (q) q.textContent = (e.usage / 1048576).toFixed(1) + ' MB used of about ' + (e.quota / 1048576).toFixed(0) + ' MB'; }).catch(() => { const q = $('#quota'); if (q) q.textContent = 'not reported by this browser'; }); } catch (e) { const q = $('#quota'); if (q) q.textContent = 'not reported by this browser'; }
+}
+handlers['reset-demo'] = async () => {
+  if (!(await confirmDialog({ title: 'Reset all demo data?', body: 'Every product, category, setting and uploaded image you changed will be replaced by the original sample data. This cannot be undone.', confirmText: 'Reset demo data', danger: true }))) return;
+  Pending.releaseAll(); V.edit = null; 
+  await Images.clear(); Repo.clear();
+  const seed = buildSeed(); S = seed.state; await writeSeedImages(seed.images); persist();
+  V.shop = { q: '', cat: 'all', sub: 'all', type: 'all', sort: 'recent' }; V.adm = { q: '', cat: 'all', type: 'all', purity: 'all', status: 'active', sort: 'updated' };
+  renderDemo($('#admin-body')); toast('Demo data reset to the original samples.');
+};
+/* =====================================================================
+   MAIN: theme, top bar, global events, boot
+   ===================================================================== */
+function applyTheme(t) {
+  const root = document.documentElement;
+  if (t === 'light' || t === 'dark') root.setAttribute('data-theme', t); else root.removeAttribute('data-theme');
+  const b = $('#theme-btn'); if (b) { b.setAttribute('data-mode', t || 'system'); b.setAttribute('aria-label', 'Theme: ' + (t || 'system') + '. Click to change.'); b.title = 'Theme: ' + (t || 'system'); }
+}
+function currentTheme() { try { return localStorage.getItem(THEME_KEY) || 'system'; } catch (e) { return 'system'; } }
+handlers['theme'] = () => {
+  const order = ['system', 'light', 'dark'], next = order[(order.indexOf(currentTheme()) + 1) % 3];
+  try { localStorage.setItem(THEME_KEY, next); } catch (e) { /* ignore */ }
+  applyTheme(next); toast('Theme: ' + next);
+};
+handlers['nav-mode'] = async (el) => {
+  if (!(await leaveEditor())) return;
+  go({ mode: el.dataset.mode, pid: null, preview: false });
+};
+
+function updateStorageBanner() {
+  const b = $('#banner'); if (!b) return;
+  const msgs = [];
+  if (isRemote()) { if (remoteStatus()) msgs.push(remoteStatus()); if (Sync.dirtyFail) msgs.push('Changes are not saved to the server yet: ' + Sync.dirtyFail.message + (Sync.dirtyFail.code === 'network' ? ' Retrying automatically.' : '')); }
+  if (!isRemote() && !storageOk) msgs.push('Browser storage is blocked, so changes will be lost when this tab closes.');
+  if (!isRemote() && !Images.ok) msgs.push('Image storage is unavailable, so uploaded images will not survive a refresh.');
+  b.hidden = !msgs.length; b.textContent = msgs.join(' ');
+}
+function renderTopbar() {
+  $$('[data-act="nav-mode"]').forEach((b) => b.setAttribute('aria-current', b.dataset.mode === V.mode ? 'page' : 'false'));
+  document.title = V.mode === 'admin' ? 'Cheong Sarak Jewelry' : 'Cheong Sarak Jewelry';
+}
+function render() { renderTopbar(); if (V.mode === 'shop') { if (V.pid) renderDetail(); else renderShop(); } else renderAdmin(); }
+
+/* delegated clicks */
+document.addEventListener('click', (e) => {
+  const el = e.target.closest('[data-act]');
+  if (!el || el.disabled) return;
+  const fn = handlers[el.dataset.act];
+  if (!fn) return;
+  if (el.tagName === 'A') e.preventDefault();
+  fn(el, e);
+});
+
+/* filters and live fields */
+const refreshShop = debounce(() => { if ($('#shop-grid')) updateShopResults(); }, 120);
+const refreshAdmin = debounce(() => { if ($('#adm-list')) updateAdminList(); }, 120);
+function onFilterInput(e) {
+  const t = e.target, id = t.id || '';
+  if (id === 'shop-q') { V.shop.q = t.value; refreshShop(); }
+  else if (id === 'shop-type') { V.shop.type = t.value; updateShopResults(); }
+  else if (id === 'shop-sort') { V.shop.sort = t.value; updateShopResults(); }
+  else if (id === 'adm-q') { V.adm.q = t.value; refreshAdmin(); }
+  else if (id.indexOf('adm-') === 0) { V.adm[id.slice(4)] = t.value; updateAdminList(); }
+  else if (t.name === 'wd' && e.type === 'change') setWeightDisplay(t.value);
+}
+document.addEventListener('input', onFilterInput);
+document.addEventListener('change', onFilterInput);
+window.addEventListener('beforeunload', () => Pending.releaseAll());
+
+/* boot */
+async function boot() {
+  applyTheme(currentTheme());
+  if (isRemote()) {
+    $('#app').innerHTML = '<div class="empty"><h3>Loading the catalog\u2026</h3></div>';
+    try { await remoteBoot(); } catch (e) {
+      $('#app').innerHTML = '<div class="empty"><h3>The catalog could not load</h3><p>' + esc(e.message) + '</p><button class="btn primary" data-act="reload-page">Try again</button></div>';
+      return;
+    }
+    const pill = $('#demo-pill'); if (pill) pill.hidden = true;
+    const foot = $('#foot'); if (foot) foot.textContent = 'Prices and photos are managed by the shop.';
+    const n = readHash(); Object.assign(V, n); updateStorageBanner(); render(); return;
+  }
+  const saved = Repo.load();
+  await Images.init();
+  if (saved) {
+    S = saved;
+    S.settings = Object.assign({ weightDisplay: 'both' }, S.settings);
+    persist();
+  } else {
+    const seed = buildSeed(); S = seed.state;
+    await Images.clear();
+    await writeSeedImages(seed.images);
+    persist();
+  }
+  const n = readHash(); Object.assign(V, n);
+  updateStorageBanner();
+  render();
+}
+boot().catch((err) => {
+  const a = document.getElementById('app');
+  if (a) a.innerHTML = '<div class="empty"><h3>The catalog could not start</h3><p>' + esc(err && err.message ? err.message : err) + '</p></div>';
+});
+</script>
